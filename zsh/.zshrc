@@ -1,5 +1,9 @@
+
+
 # Path to your oh-my-zsh installation.
   export ZSH=/home/xing/.oh-my-zsh
+
+[ -d $ZSH ] || git clone https://github.com/robbyrussell/oh-my-zsh.git $ZSH
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
