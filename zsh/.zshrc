@@ -91,3 +91,7 @@ source $ZSH/oh-my-zsh.sh
 alias j=z # use convinient j instead of z for jump
 alias jj=zz
 alias nz="nix-shell --run zsh"
+
+function ew() {
+  (emacs "$@" &> /dev/null &)
+}
