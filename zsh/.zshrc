@@ -53,10 +53,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
-
-# WORKAROUND: nixos doesn't install the autojump.zsh
-[ -f $HOME/.nix-profile/etc/profile.d/autojump.sh ] && . $HOME/.nix-profile/etc/profile.d/autojump.sh
+plugins=(git fasd)
 
 # User configuration
 
@@ -89,3 +86,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# fasd
+alias j=z # use convinient j instead of z for jump
+alias jj=zz

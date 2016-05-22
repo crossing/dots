@@ -3,7 +3,7 @@
     all = with pkgs; buildEnv {
       name = "all";
       paths = [
-        autojump
+        fasd
       ];
     };
   };
