@@ -55,6 +55,9 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
+# WORKAROUND: nixos doesn't install the autojump.zsh
+[ -f $HOME/.nix-profile/etc/profile.d/autojump.sh ] && . $HOME/.nix-profile/etc/profile.d/autojump.sh
+
 # User configuration
 
   export PATH="/home/xing/bin:/var/setuid-wrappers:/home/xing/.nix-profile/bin:/home/xing/.nix-profile/sbin:/home/xing/.nix-profile/lib/kde4/libexec:/nix/var/nix/profiles/default/bin:/nix/var/nix/profiles/default/sbin:/nix/var/nix/profiles/default/lib/kde4/libexec:/run/current-system/sw/bin:/run/current-system/sw/sbin:/run/current-system/sw/lib/kde4/libexec"
