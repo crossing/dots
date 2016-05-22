@@ -57,7 +57,7 @@ plugins=(git fasd)
 
 # User configuration
 
-  export PATH="/home/xing/bin:/var/setuid-wrappers:/home/xing/.nix-profile/bin:/home/xing/.nix-profile/sbin:/home/xing/.nix-profile/lib/kde4/libexec:/nix/var/nix/profiles/default/bin:/nix/var/nix/profiles/default/sbin:/nix/var/nix/profiles/default/lib/kde4/libexec:/run/current-system/sw/bin:/run/current-system/sw/sbin:/run/current-system/sw/lib/kde4/libexec"
+  #export PATH="/home/xing/bin:/var/setuid-wrappers:/home/xing/.nix-profile/bin:/home/xing/.nix-profile/sbin:/home/xing/.nix-profile/lib/kde4/libexec:/nix/var/nix/profiles/default/bin:/nix/var/nix/profiles/default/sbin:/nix/var/nix/profiles/default/lib/kde4/libexec:/run/current-system/sw/bin:/run/current-system/sw/sbin:/run/current-system/sw/lib/kde4/libexec"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -90,3 +90,4 @@ source $ZSH/oh-my-zsh.sh
 # fasd
 alias j=z # use convinient j instead of z for jump
 alias jj=zz
+alias nz="nix-shell --run zsh"
