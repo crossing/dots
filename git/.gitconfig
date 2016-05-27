@@ -1,3 +1,5 @@
 [user]
 	email = xor@jecity.net
 	name = Xing Yang
+[push]
+	default = simple
