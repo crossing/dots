@@ -54,7 +54,8 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git fasd docker
-         rbenv bundler)
+         rbenv bundler
+         aws)
 
 BUNDLED_COMMANDS=(rubocop)
 
