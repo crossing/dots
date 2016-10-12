@@ -1,0 +1,1 @@
+. $HOME/.all-profile.sh
