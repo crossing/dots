@@ -46,13 +46,13 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-flow-avh fasd docker
-         rbenv bundler
+plugins=(git git-flow-avh docker
          aws)
 
-BUNDLED_COMMANDS=(rubocop)
-
 # User configuration
+for i in $HOME/.zshrc.d/*.sh ; do
+ . "$i"
+done
 
   #export PATH="/home/xing/bin:/var/setuid-wrappers:/home/xing/.nix-profile/bin:/home/xing/.nix-profile/sbin:/home/xing/.nix-profile/lib/kde4/libexec:/nix/var/nix/profiles/default/bin:/nix/var/nix/profiles/default/sbin:/nix/var/nix/profiles/default/lib/kde4/libexec:/run/current-system/sw/bin:/run/current-system/sw/sbin:/run/current-system/sw/lib/kde4/libexec"
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -83,12 +83,3 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# fasd
-alias j=z # use convinient j instead of z for jump
-alias jj=zz
-alias nz="nix-shell --run zsh"
-
-function ew() {
-  (emacs "$@" &> /dev/null &)
-}
