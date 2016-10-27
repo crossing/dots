@@ -50,7 +50,7 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git git-flow-avh docker
-         aws)
+         aws stack)
 
 # User configuration
 for i in $HOME/.zshrc.d/*.sh ; do
