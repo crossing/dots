@@ -49,8 +49,9 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker
-         aws stack)
+plugins=(git
+         stack
+         docker aws kubectl)
 
 # User configuration
 for i in $HOME/.zshrc.d/*.sh ; do
@@ -63,7 +64,7 @@ done
 source $ZSH/oh-my-zsh.sh
 
 # git flow completion for git-flow-avh
-# TODO: remove it when it's an official plugin
+# TODO: remove it when it's an official p
 if [ ! -e $HOME/.git-flow-completion.zsh ]; then
   curl -L https://raw.githubusercontent.com/petervanderdoes/git-flow-completion/develop/git-flow-completion.zsh -o $HOME/.git-flow-completion.zsh
 fi
