@@ -4,6 +4,7 @@
       name = "all";
       paths = [
         fasd
+        leiningen
       ];
     };
   };
