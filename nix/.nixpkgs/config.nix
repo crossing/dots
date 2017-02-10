@@ -5,6 +5,7 @@
       paths = [
         fasd
         leiningen
+        boot
       ];
     };
   };
