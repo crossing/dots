@@ -63,6 +63,10 @@ done
 
 source $ZSH/oh-my-zsh.sh
 
+# this line must appear after oh-my-zsh to take effect
+# TODO: make a plugin
+source /usr/lib64/google-cloud-sdk/completion.zsh.inc
+
 # git flow completion for git-flow-avh
 # TODO: remove it when it's an official p
 if [ ! -e $HOME/.git-flow-completion.zsh ]; then
