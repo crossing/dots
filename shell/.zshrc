@@ -51,7 +51,7 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git
          stack
-         docker aws kubectl)
+         docker kubectl)
 
 # User configuration
 for i in $HOME/.zshrc.d/*.sh ; do
