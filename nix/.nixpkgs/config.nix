@@ -6,6 +6,7 @@
         fasd
         leiningen
         boot
+        lastpass-cli
       ];
     };
   };
