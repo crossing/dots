@@ -272,6 +272,7 @@ you should place your code here."
   (add-hook 'ess-mode-hook
             (lambda ()
               (ess-toggle-underscore nil)))
+  (add-hook 'terraform-mode-hook 'terraform-format-on-save-mode)
   (setq clojure-enable-fancify-symbols t)
   (setq gofmt-command "goimports"))
 
