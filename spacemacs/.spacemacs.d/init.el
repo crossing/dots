@@ -36,7 +36,6 @@ values."
      ruby
      php
      python
-     go
      sql
      javascript
      windows-scripts
@@ -274,8 +273,7 @@ you should place your code here."
             (lambda ()
               (ess-toggle-underscore nil)))
   (add-hook 'terraform-mode-hook 'terraform-format-on-save-mode)
-  (setq clojure-enable-fancify-symbols t)
-  (setq gofmt-command "goimports"))
+  (setq clojure-enable-fancify-symbols t))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
