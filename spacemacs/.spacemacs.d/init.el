@@ -32,7 +32,11 @@ values."
      ;; languages or syntax highliting
      ess
      clojure
-     scala
+     (scala :variables
+            scala-use-unicode-arrows t
+            scala-auto-insert-asterisk-in-comments t
+            scala-auto-start-ensime t
+            ensime-startup-notification nil)
      ruby
      php
      python
@@ -257,7 +261,9 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
-  (setq-default exec-path-from-shell-variables '())
+  (setq-default
+   exec-path-from-shell-variables '()
+   imenu-auto-rescan t)
   )
 
 (defun dotspacemacs/user-config ()
@@ -273,7 +279,8 @@ you should place your code here."
             (lambda ()
               (ess-toggle-underscore nil)))
   (add-hook 'terraform-mode-hook 'terraform-format-on-save-mode)
-  (setq clojure-enable-fancify-symbols t))
+  (setq clojure-enable-fancify-symbols t)
+  (require 'ensime))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
