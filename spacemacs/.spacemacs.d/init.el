@@ -19,7 +19,6 @@ values."
    dotspacemacs-configuration-layers
    '(
      ;; emacs
-     ranger
      auto-completion
      syntax-checking
      fasd
