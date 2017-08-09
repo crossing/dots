@@ -37,7 +37,6 @@ values."
             scala-auto-start-ensime t
             ensime-startup-notification nil)
      csharp
-     ruby
      php
      python
      sql
