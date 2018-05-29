@@ -3,6 +3,7 @@ if [ ! -d $HOME/.goenv ]; then
 fi
 
 export GOENV_ROOT=$HOME/.goenv
-export PATH=$GOENV_ROOT/bin:$PATH
+export GOPATH=$HOME/.go
+export PATH=$GOPATH/bin:$GOENV_ROOT/bin:$PATH
 typeset -U path
 eval "$(goenv init -)"
