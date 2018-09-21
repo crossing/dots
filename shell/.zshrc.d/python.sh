@@ -7,3 +7,7 @@ if [ ! -d $HOME/.pyenv/plugins/pyenv-virtualenv ]; then
 fi
 
 plugins+=(pyenv python pip virtualenv)
+
+export CONDA_PREFIX=$HOME/.conda
+export PATH=$CONDA_PREFIX/bin:$PATH
+typeset -U path
