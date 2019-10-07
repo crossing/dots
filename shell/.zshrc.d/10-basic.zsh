@@ -14,3 +14,11 @@ _omz_plugin emacs
 # Set .local/bin
 export PATH=$PATH:$HOME/.local/bin
 typeset -U path
+
+# direnv
+DIRENV_VERSION=v2.20.0
+if [ ! -f "$HOME/.local/bin/direnv" ]; then
+    curl -l https://github.com/direnv/direnv/releases/download/${DIRENV_VERSION}/direnv.linux-amd64 -o "$HOME/.local/bin/direnv"
+    chmod +x "$HOME/.local/bin/direnv"
+fi
+eval "$(direnv hook zsh)"
