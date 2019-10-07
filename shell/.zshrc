@@ -20,3 +20,5 @@ antibody bundle zsh-users/zsh-syntax-highlighting
 antibody bundle zsh-users/zsh-completions
 antibody bundle robbyrussell/oh-my-zsh path:lib
 antibody bundle robbyrussell/oh-my-zsh path:themes/robbyrussell.zsh-theme
+
+compinit -i
