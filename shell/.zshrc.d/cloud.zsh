@@ -38,3 +38,16 @@ if ! ( which terragrunt > /dev/null &&
     chmod +x $HOME/.local/bin/terragrunt
 fi
 
+# Pulumi
+PULUMI_VERSION=1.3.1
+if ! ( which pulumi > /dev/null &&
+       pulumi version | grep -w "v${PULUMI_VERSION}" > /dev/null ); then
+    TEMP_DIR=$(mktemp -d)
+    curl -L https://get.pulumi.com/releases/sdk/pulumi-v${PULUMI_VERSION}-linux-x64.tar.gz -o ${TEMP_DIR}/pulumi.tar.gz
+    pushd $TEMP_DIR
+    tar xvf pulumi.tar.gz
+    mv pulumi/* $HOME/.local/bin/
+    popd
+
+    rm -rf $TEMP_DIR
+fi
