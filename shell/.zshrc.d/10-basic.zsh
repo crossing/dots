@@ -15,6 +15,10 @@ _omz_plugin emacs
 export PATH=$PATH:$HOME/.local/bin
 typeset -U path
 
+# zfunc
+mkdir -p $HOME/.zfunc
+fpath+=$HOME/.zfunc
+
 # direnv
 DIRENV_VERSION=v2.20.0
 if [ ! -f "$HOME/.local/bin/direnv" ]; then

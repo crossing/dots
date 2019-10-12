@@ -16,6 +16,13 @@ _omz_plugin virtualenv
 # Pipsi
 [ -f $HOME/.local/bin/pipsi ] || sh -c "curl https://raw.githubusercontent.com/mitsuhiko/pipsi/master/get-pipsi.py | python"
 
+# Poetry
+if [ ! -d "$HOME/.poetry" ]; then
+    sh -c "curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python"
+    ln -s "$HOME/.poetry/bin/poetry" "$HOME/.local/bin"
+    poetry completions zsh > $HOME/.zfunc/_poetry
+fi
+
 # Conda
 source $HOME/.conda/etc/profile.d/conda.sh
 conda activate
