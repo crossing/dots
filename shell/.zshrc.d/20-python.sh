@@ -13,8 +13,9 @@ _omz_plugin pip
 _omz_plugin pipenv
 _omz_plugin virtualenv
 
-# Pipsi
-[ -f $HOME/.local/bin/pipsi ] || sh -c "curl https://raw.githubusercontent.com/mitsuhiko/pipsi/master/get-pipsi.py | python"
+# Pipx
+[ -f $HOME/.local/bin/pipx ] || python3 -m pip install --user pipx
+eval "$(register-python-argcomplete pipx)"
 
 # Poetry
 if [ ! -d "$HOME/.poetry" ]; then

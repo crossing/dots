@@ -12,6 +12,8 @@ _omz_plugin() {
     antibody bundle robbyrussell/oh-my-zsh path:plugins/$plugin
 }
 
+autoload -U bashcompinit
+bashcompinit
 for d in $HOME/.zshrc.d/*; do
     source $d
 done

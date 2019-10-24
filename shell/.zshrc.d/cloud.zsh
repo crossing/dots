@@ -10,7 +10,7 @@ unset GCLOUD_ZSH_COMPLETION
 _omz_plugin kubectl
 
 # aws
-which aws > /dev/null || pipsi install awscli
+which aws > /dev/null || pipx install awscli
 _omz_plugin aws
 
 # aws-vault
@@ -36,18 +36,4 @@ if ! ( which terragrunt > /dev/null &&
        terragrunt --version | grep -w "terragrunt version v${TERRAGRUNT_VERSION}" > /dev/null ); then
     curl -L https://github.com/gruntwork-io/terragrunt/releases/download/v${TERRAGRUNT_VERSION}/terragrunt_linux_amd64 -o $HOME/.local/bin/terragrunt
     chmod +x $HOME/.local/bin/terragrunt
-fi
-
-# Pulumi
-PULUMI_VERSION=1.3.1
-if ! ( which pulumi > /dev/null &&
-       pulumi version | grep -w "v${PULUMI_VERSION}" > /dev/null ); then
-    TEMP_DIR=$(mktemp -d)
-    curl -L https://get.pulumi.com/releases/sdk/pulumi-v${PULUMI_VERSION}-linux-x64.tar.gz -o ${TEMP_DIR}/pulumi.tar.gz
-    pushd $TEMP_DIR
-    tar xvf pulumi.tar.gz
-    mv pulumi/* $HOME/.local/bin/
-    popd
-
-    rm -rf $TEMP_DIR
 fi
