@@ -48,6 +48,9 @@ values."
      markdown
      ranger
      fasd
+     (treemacs :variables
+               treemacs-use-git-mode 'deffered)
+
      ;; org
      (shell :variables
             shell-default-height 30
