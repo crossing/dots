@@ -26,6 +26,5 @@ fi
 
 # Conda
 source $HOME/.conda/etc/profile.d/conda.sh
-conda activate
 
 antibody bundle bckim92/zsh-autoswitch-conda
