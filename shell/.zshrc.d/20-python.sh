@@ -25,6 +25,7 @@ if [ ! -d "$HOME/.poetry" ]; then
 fi
 
 # Conda
-source $HOME/.conda/etc/profile.d/conda.sh
-
-antibody bundle bckim92/zsh-autoswitch-conda
+if [ -f $HOME/.conda/etc/profile.d/conda.sh ]; then
+    source $HOME/.conda/etc/profile.d/conda.sh
+    antibody bundle bckim92/zsh-autoswitch-conda
+fi

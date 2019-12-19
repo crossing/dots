@@ -2,6 +2,7 @@ source <(antibody init)
 ANTIBODY_HOME="$(antibody home)"
 
 autoload -Uz compinit 
+compinit
 
 ZSH="$ANTIBODY_HOME"/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh
 ZSH_CACHE_DIR="$ANTIBODY_HOME/zsh_cache"
