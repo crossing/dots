@@ -37,3 +37,23 @@ if ! ( which terragrunt > /dev/null &&
     curl -L https://github.com/gruntwork-io/terragrunt/releases/download/v${TERRAGRUNT_VERSION}/terragrunt_linux_amd64 -o $HOME/.local/bin/terragrunt
     chmod +x $HOME/.local/bin/terragrunt
 fi
+
+# packer
+if [ -L /usr/sbin/packer ]; then
+    echo "A cracker lib binary packer exists in the path, please remove it before installing packer."
+    exit 1
+fi
+
+PACKER_VERSION=1.5.1
+if ! ( which packer > /dev/null 2>&1 &&
+       packer version | grep -w "Packer v${PACKER_VERSION}" > /dev/null); then
+    TEMP_DIR=$(mktemp -d)
+    pushd $TEMP_DIR
+    curl -L https://releases.hashicorp.com/packer/${PACKER_VERSION}/packer_${PACKER_VERSION}_linux_amd64.zip -o ${TEMP_DIR}/packer.zip
+    unzip packer.zip
+    mv packer $HOME/.local/bin/packer
+    chmod +x $HOME/.local/bin/packer
+    popd
+
+    rm -rf $TEMP_DIR
+fi
