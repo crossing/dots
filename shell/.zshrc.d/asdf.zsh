@@ -16,14 +16,16 @@ adsf_plugins=(
     ruby
     rust
     golang
+    nodejs
 
     haskell
     idris
 
+    hub
     direnv
     terraform
     packer
 )
 for plugin in $adsf_plugins; do
-    eval "asdf plugin add $plugin" 2>/dev/null
+    (asdf plugin list | grep $plugin > /dev/null) || asdf plugin add $plugin
 done
