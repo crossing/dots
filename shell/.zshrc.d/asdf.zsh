@@ -3,8 +3,6 @@ if [ ! -d "$HOME/.asdf" ]; then
     pushd $HOME/.asdf
     git checkout "$(git describe --abbrev=0 --tags)"
     popd
-
-    ASDF_INIT=true
 fi
 
 _omz_plugin asdf
@@ -14,6 +12,7 @@ adsf_plugins=(
     clojure
 
     python
+    poetry
     ruby
     rust
     golang
