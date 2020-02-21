@@ -14,15 +14,21 @@ which aws > /dev/null || pipx install awscli
 _omz_plugin aws
 
 # aws-vault
+AWS_VAULT_VERSION=5.2.1
+if ! ( which aws-vault > /dev/null 2>&1 &&
+       aws-vault --version | grep -w "v${AWS_VAULT_VERSION}" > /dev/null ); then
+    curl -L https://github.com/99designs/aws-vault/releases/download/v${AWS_VAULT_VERSION}/aws-vault-linux-amd64 -o $HOME/.local/bin/aws-vault
+    chmod +x $HOME/.local/bin/aws-vault
+fi
 antibody bundle blimmer/zsh-aws-vault
 
 # terraform
-TERRAFORM_VERSION=0.12.9
+TERRAFORM_VERSION=0.12.20
 if ! ( which terraform > /dev/null &&
        terraform version | grep -w "Terraform v${TERRAFORM_VERSION}" > /dev/null ); then
     TEMP_DIR=$(mktemp -d)
-    curl -L https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip -o ${TEMP_DIR}/terraform.zip
     pushd $TEMP_DIR
+    curl -L https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip -o ${TEMP_DIR}/terraform.zip
     unzip terraform.zip
     mv terraform $HOME/.local/bin/terraform
     chmod +x $HOME/.local/bin/terraform
