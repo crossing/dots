@@ -26,14 +26,6 @@ _omz_plugin emacs
 mkdir -p $HOME/.zfunc
 fpath+=$HOME/.zfunc
 
-# direnv
-DIRENV_VERSION=v2.20.0
-if [ ! -f "$HOME/.local/bin/direnv" ]; then
-    curl -sSL https://github.com/direnv/direnv/releases/download/${DIRENV_VERSION}/direnv.linux-amd64 -o "$HOME/.local/bin/direnv"
-    chmod +x "$HOME/.local/bin/direnv"
-fi
-eval "$(direnv hook zsh)"
-
 # snap
 if (which snap 1>/dev/null 2>/dev/null); then
     export PATH=$PATH:/var/lib/snapd/snap/bin

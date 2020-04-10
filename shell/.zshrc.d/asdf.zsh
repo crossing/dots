@@ -9,23 +9,26 @@ _omz_plugin asdf
 
 adsf_plugins=(
     java
+    scala
     clojure
 
     python
     poetry
-    ruby
-    rust
-    golang
-    nodejs
 
-    haskell
-    idris
-
-    hub
+    github-cli
     direnv
     terraform
     packer
+    consul
+
+    skaffold
+    minikube
 )
 for plugin in $adsf_plugins; do
     (asdf plugin list | grep $plugin > /dev/null) || asdf plugin add $plugin
+    asdf install $plugin latest > /dev/null
+    asdf global $plugin $(asdf latest $plugin) > /dev/null
 done
+
+# Post installation settings
+eval "$(direnv hook zsh)"
