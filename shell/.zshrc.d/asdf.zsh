@@ -23,6 +23,7 @@ adsf_plugins=(
 
     skaffold
     minikube
+    kubectl
 )
 for plugin in $adsf_plugins; do
     (asdf plugin list | grep $plugin > /dev/null) || asdf plugin add $plugin
@@ -32,3 +33,4 @@ done
 
 # Post installation settings
 eval "$(direnv hook zsh)"
+_omz_plugin kubectl
