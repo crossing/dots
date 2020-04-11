@@ -25,3 +25,4 @@ antibody bundle robbyrussell/oh-my-zsh path:lib
 antibody bundle robbyrussell/oh-my-zsh path:themes/robbyrussell.zsh-theme
 
 compinit -i
+typeset -U path

@@ -5,7 +5,6 @@ _omz_plugin ansible
 # Set .local/bin
 mkdir -p $HOME/.local/bin
 export PATH=$PATH:$HOME/.local/bin
-typeset -U path
 
 # fasd
 if ! (which fasd > /dev/null); then 
@@ -29,5 +28,4 @@ fpath+=$HOME/.zfunc
 # snap
 if (which snap 1>/dev/null 2>/dev/null); then
     export PATH=$PATH:/var/lib/snapd/snap/bin
-    typeset -U path
 fi
