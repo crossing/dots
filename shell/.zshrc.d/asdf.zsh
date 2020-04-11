@@ -27,8 +27,6 @@ adsf_plugins=(
 )
 for plugin in $adsf_plugins; do
     (asdf plugin list | grep $plugin > /dev/null) || asdf plugin add $plugin
-    asdf install $plugin latest > /dev/null
-    asdf global $plugin $(asdf latest $plugin) > /dev/null
 done
 
 # Post installation settings
