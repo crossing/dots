@@ -34,3 +34,4 @@ done
 # Post installation settings
 eval "$(direnv hook zsh)"
 _omz_plugin kubectl
+export PYTHONWARNINGS=ignore
