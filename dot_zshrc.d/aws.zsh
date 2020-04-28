@@ -1,15 +1,12 @@
-# gcloud
-CLOUDSDK_PREFIX=$HOME/.local/opt
-export CLOUDSDK_HOME=$CLOUDSDK_PREFIX/google-cloud-sdk
-export CLOUDSDK_PYTHON=python3
-
-PATH="$PATH:$CLOUDSDK_HOME/bin"
-which gcloud > /dev/null || curl https://sdk.cloud.google.com | bash -s -- --disable-prompts --install-dir=$CLOUDSDK_PREFIX
-
-_omz_plugin gcloud
-
 # aws
-which aws > /dev/null || pipx install awscli
+if ! (which aws > /dev/null 2>&1); then
+    tmp=$(mktemp -d)
+    curl https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip -o /$tmp/awscliv2.zip
+    pushd $tmp
+    unzip awscliv2.zip
+    aws/install -i ~/.local/opt/aws-cli -b ~/.local/bin
+    popd
+fi
 _omz_plugin aws
 
 # aws-vault
