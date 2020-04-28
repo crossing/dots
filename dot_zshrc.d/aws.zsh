@@ -1,12 +1,5 @@
 # aws
-if ! (which aws > /dev/null 2>&1); then
-    tmp=$(mktemp -d)
-    curl https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip -o /$tmp/awscliv2.zip
-    pushd $tmp
-    unzip awscliv2.zip
-    aws/install -i ~/.local/opt/aws-cli -b ~/.local/bin
-    popd
-fi
+which aws > /dev/null 2>&1 || pipx install awscli
 _omz_plugin aws
 
 # aws-vault
