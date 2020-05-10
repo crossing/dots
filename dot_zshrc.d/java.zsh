@@ -1,3 +1,5 @@
+_asdf_tool java adopt-openjdk-11+28
+
 # set JAVA_HOME on every change directory
 function asdf_update_java_home {
   asdf current java 2>&1 > /dev/null
