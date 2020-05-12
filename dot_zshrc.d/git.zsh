@@ -1,1 +1,1 @@
-_asdf_tool github-cli
+_asdf_tool github-cli 0.8.0
