@@ -27,5 +27,5 @@ fpath+=$HOME/.zfunc
 
 # snap
 if (which snap 1>/dev/null 2>/dev/null); then
-    export PATH=$PATH:/var/lib/snapd/snap/bin
+    export PATH=$PATH:/var/lib/snapd/snap/bin:/snap/bin
 fi
