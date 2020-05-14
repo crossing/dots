@@ -1,10 +1,9 @@
-_omz_plugin git
-_omz_plugin git-extras
 _omz_plugin ansible
 
-# Set .local/bin
-mkdir -p $HOME/.local/bin
-export PATH=$PATH:$HOME/.local/bin
+antibody bundle zsh-users/zsh-syntax-highlighting
+antibody bundle zsh-users/zsh-completions
+antibody bundle robbyrussell/oh-my-zsh path:lib
+antibody bundle robbyrussell/oh-my-zsh path:themes/robbyrussell.zsh-theme
 
 # fasd
 if ! (which fasd > /dev/null); then 

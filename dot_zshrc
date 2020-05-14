@@ -1,3 +1,10 @@
+mkdir -p $HOME/.local/bin
+path+=($HOME/.local/bin)
+
+if ! ( which antibody > /dev/null ); then
+   curl -sfL git.io/antibody | sh -s - -b $HOME/.local/bin
+fi
+
 source <(antibody init)
 ANTIBODY_HOME="$(antibody home)"
 
@@ -16,11 +23,6 @@ _omz_plugin() {
 for d in $HOME/.zshrc.d/*; do
     source $d
 done
-
-antibody bundle zsh-users/zsh-syntax-highlighting
-antibody bundle zsh-users/zsh-completions
-antibody bundle robbyrussell/oh-my-zsh path:lib
-antibody bundle robbyrussell/oh-my-zsh path:themes/robbyrussell.zsh-theme
 
 compinit -i
 typeset -U path
