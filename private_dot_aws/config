@@ -1,0 +1,5 @@
+[default]
+region = eu-west-1
+
+[profile qit]
+region = cn-northwest-1
