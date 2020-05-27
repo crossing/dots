@@ -10,3 +10,8 @@ if ! ( which aws-vault > /dev/null 2>&1 &&
     chmod +x $HOME/.local/bin/aws-vault
 fi
 antibody bundle blimmer/zsh-aws-vault
+
+alias aw='aws-vault'
+alias awe='aws-vault exec'
+alias awen='aws-vault exec -n'
+alias awl='aws-vault login'
