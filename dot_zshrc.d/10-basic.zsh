@@ -5,6 +5,9 @@ antibody bundle zsh-users/zsh-completions
 antibody bundle robbyrussell/oh-my-zsh path:lib
 antibody bundle robbyrussell/oh-my-zsh path:themes/robbyrussell.zsh-theme
 
+# editor
+export EDITOR='code --wait'
+
 # fasd
 if ! (which fasd > /dev/null); then 
     curl -sSL https://raw.githubusercontent.com/clvv/fasd/master/fasd -o $HOME/.local/bin/fasd
