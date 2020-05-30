@@ -28,3 +28,9 @@ fpath+=$HOME/.zfunc
 if (which snap 1>/dev/null 2>/dev/null); then
     export PATH=$PATH:/var/lib/snapd/snap/bin:/snap/bin
 fi
+
+# starship
+if ! (( $+commands[starship] )); then
+    curl -fsSL https://starship.rs/install.sh | bash -s - -b $HOME/.local/bin -f
+fi
+eval "$(starship init zsh)"
