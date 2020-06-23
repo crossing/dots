@@ -1,5 +1,5 @@
 # aws
-_omz_plugin aws
+source $(asdf which aws_zsh_completer.sh)
 
 # aws-vault
 AWS_VAULT_VERSION=5.4.4
