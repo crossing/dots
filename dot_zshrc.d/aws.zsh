@@ -1,5 +1,4 @@
 # aws
-which aws > /dev/null 2>&1 || pipx install awscli
 _omz_plugin aws
 
 # aws-vault
