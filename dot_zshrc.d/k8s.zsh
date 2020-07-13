@@ -4,6 +4,7 @@ _asdf_tool skaffold 1.10.1
 _asdf_tool fluxctl 1.19.0
 _asdf_tool eksctl 0.20.0
 _asdf_tool helm 3.2.1
+_asdf_tool kustomize 3.8.0
 
 _omz_plugin kubectl
 _omz_plugin minikube
@@ -12,4 +13,5 @@ _omz_plugin helm
 source <(skaffold completion zsh)
 source <(fluxctl completion zsh)
 
+complete -C $(which kustomize) kustomize
 eksctl completion zsh > $HOME/.zfunc/_eksctl
