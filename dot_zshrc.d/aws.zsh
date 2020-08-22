@@ -1,5 +1,8 @@
 # aws
-source $(asdf which aws_zsh_completer.sh)
+if ! (( $+commands[aws] )); then
+    pipx install awscli
+fi
+source $(which aws_zsh_completer.sh)
 
 # aws-vault
 AWS_VAULT_VERSION=5.4.4
