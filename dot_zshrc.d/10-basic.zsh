@@ -1,5 +1,3 @@
-_omz_plugin ansible
-
 antibody bundle zsh-users/zsh-syntax-highlighting
 antibody bundle zsh-users/zsh-completions
 antibody bundle robbyrussell/oh-my-zsh path:lib
