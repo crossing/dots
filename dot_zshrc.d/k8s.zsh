@@ -1,14 +1,12 @@
 function kubectl() {
     unfunction kubectl
     _asdf_tool kubectl 1.18.2
-    _omz_plugin kubectl
     kubectl $@
 }
 
 function minikube() {
     unfunction minikube
     _asdf_tool minikube 1.10.1
-    _omz_plugin minikube
     minikube $@
 }
 
@@ -47,3 +45,5 @@ function kustomize() {
     complete -C $(which kustomize) kustomize
     kustomize $@
 }
+
+_omz_plugin kubectl
