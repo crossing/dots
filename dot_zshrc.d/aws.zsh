@@ -1,8 +1,17 @@
+function update_aws() {
+    TMPDIR=$(mktemp -d)
+    pushd $TMPDIR
+    curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+    unzip awscliv2.zip
+    ./aws/install -i $HOME/.local/opt/aws-cli-v2 -b $HOME/.local/bin -u
+    popd
+}
+
 # aws
 if ! (( $+commands[aws] )); then
-    pipx install awscli
+    update_aws
 fi
-source $(which aws_zsh_completer.sh)
+_omz_plugin aws
 
 # aws-vault
 AWS_VAULT_VERSION=5.4.4
