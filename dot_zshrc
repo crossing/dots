@@ -1,7 +1,7 @@
 mkdir -p $HOME/.local/bin
 path+=($HOME/.local/bin)
 
-if ! ( which antibody > /dev/null ); then
+if ! (( $+commands[antibody] )); then
    curl -sfL git.io/antibody | sh -s - -b $HOME/.local/bin
 fi
 
@@ -12,7 +12,7 @@ autoload -U +X compinit && compinit
 autoload -U +X bashcompinit && bashcompinit
 
 ZSH="$ANTIBODY_HOME"/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh
-ZSH_CACHE_DIR="$ANTIBODY_HOME/zsh_cache"
+ZSH_CACHE_DIR="$HOME/.cache/zsh_cache"
 mkdir -p $ZSH_CACHE_DIR
 
 _omz_plugin() {
@@ -27,3 +27,4 @@ done
 compinit -i
 typeset -U path
 typeset -U fpath
+
