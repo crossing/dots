@@ -11,3 +11,13 @@ source_profile = home
 
 [profile qit]
 region = cn-northwest-1
+
+[profile qit-oidc-readonly]
+region = cn-northwest-1
+role_arn = arn:aws-cn:iam::103412027062:role/azure-oidc-readonly
+web_identity_token_process = oidc azure_china --tenant-id d9b5e346-fa0c-40a4-8cec-ad494f51265e --client-id 359a7248-c9ea-4fcc-b5be-ee4fa2d5a2f9
+
+[profile qit-oidc-admin]
+region = cn-northwest-1
+role_arn = arn:aws-cn:iam::103412027062:role/azure-oidc-admin
+web_identity_token_process = oidc azure_china --tenant-id=d9b5e346-fa0c-40a4-8cec-ad494f51265e --client-id=acdda00a-4724-4edd-9bf8-50833d077d81

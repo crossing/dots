@@ -13,10 +13,14 @@ if ! (( $+commands[aws] )); then
 fi
 _omz_plugin aws
 
+if ! (( $+commands[oidc] )); then
+    pipx install https://github.com/crossing/oidc-cli/releases/download/v0.1.2/oidc-cli-0.1.2.tar.gz
+fi
+
 # aws-vault
-AWS_VAULT_VERSION=5.4.4
+AWS_VAULT_VERSION=6.2.0
 if ! ( which aws-vault > /dev/null 2>&1 &&
-       aws-vault --version | grep -w "v${AWS_VAULT_VERSION}" > /dev/null ); then
+       aws-vault --version 2>&1 | grep -w "v${AWS_VAULT_VERSION}" > /dev/null ); then
     curl -L https://github.com/99designs/aws-vault/releases/download/v${AWS_VAULT_VERSION}/aws-vault-linux-amd64 -o $HOME/.local/bin/aws-vault
     chmod +x $HOME/.local/bin/aws-vault
 fi
