@@ -5,19 +5,17 @@ region = eu-west-1
 region = eu-west-1
 
 [profile qit-int]
-region = ap-northeast-1
-role_arn = arn:aws:iam::657056652420:role/OrganizationAccountAccessRole
-source_profile = home
+region = ap-southeast-1
 
 [profile qit]
 region = cn-northwest-1
 
-[profile qit-oidc-readonly]
+[profile qit-cn-ro]
 region = cn-northwest-1
 role_arn = arn:aws-cn:iam::103412027062:role/azure-oidc-readonly
 web_identity_token_process = oidc azure_china --tenant-id d9b5e346-fa0c-40a4-8cec-ad494f51265e --client-id 359a7248-c9ea-4fcc-b5be-ee4fa2d5a2f9
 
-[profile qit-oidc-admin]
+[profile qit-cn-admin]
 region = cn-northwest-1
 role_arn = arn:aws-cn:iam::103412027062:role/azure-oidc-admin
 web_identity_token_process = oidc azure_china --tenant-id=d9b5e346-fa0c-40a4-8cec-ad494f51265e --client-id=acdda00a-4724-4edd-9bf8-50833d077d81
