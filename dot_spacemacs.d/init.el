@@ -318,8 +318,6 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
-  ;; Enable conda environments
-  (setenv "WORKON_HOME" (concat (getenv "HOME") "/.conda/envs"))
   (setq custom-file "~/.emacs.d/.cache/.custom-settings")
   )
 
