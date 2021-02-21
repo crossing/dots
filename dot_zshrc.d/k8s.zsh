@@ -26,7 +26,7 @@ function fluxctl() {
 
 function eksctl() {
     unfunction eksctl
-    _asdf_tool eksctl 0.20.0
+    _asdf_tool eksctl 0.34.0
     eksctl completion zsh > $HOME/.zfunc/_eksctl
     compinit
     eksctl $@
