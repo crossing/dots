@@ -6,7 +6,7 @@ function kubectl() {
 
 function minikube() {
     unfunction minikube
-    _asdf_tool minikube 1.10.1
+    _asdf_tool minikube 1.17.1
     minikube $@
 }
 
