@@ -2,6 +2,8 @@
     path = .gitconfig-home
 [includeIf "gitdir:~/works/qit/"]
     path = .gitconfig-qit
+[includeif "gitdir:~/works/hanson/"]
+    path = .gitconfig-hanson
 [credential]
     helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
 [filter "lfs"]
