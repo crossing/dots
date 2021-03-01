@@ -1,4 +1,4 @@
-_asdf_tool java adopt-openjdk-11.0.7+10
+_asdf_tool java adoptopenjdk-11.0.9+11
 
 function maven() {
   unfunction maven
