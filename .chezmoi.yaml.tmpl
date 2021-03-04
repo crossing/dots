@@ -1,0 +1,4 @@
+{{ $profile := promptString "Profile:" -}}
+data:
+  gitconfig:
+    default: {{ $profile }}

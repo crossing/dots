@@ -1,9 +1,7 @@
 [include]
-    path = .gitconfig-home
+    path = .gitconfig-{{ .gitconfig.default }}
 [includeIf "gitdir:~/works/qit/"]
     path = .gitconfig-qit
-[includeif "gitdir:~/works/hanson/"]
-    path = .gitconfig-hanson
 [credential]
     helper = libsecret
 [filter "lfs"]
