@@ -49,6 +49,7 @@ function kustomize() {
 function k9s() {
     unfunction k9s
     _asdf_tool k9s
+    k9s $@
 }
 
 _omz_plugin kubectl
