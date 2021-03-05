@@ -4,6 +4,8 @@
     path = .gitconfig-qit
 [credential]
     helper = libsecret
+[pull]
+    rebase = true
 [filter "lfs"]
     clean = git-lfs clean -- %f
     smudge = git-lfs smudge -- %f
