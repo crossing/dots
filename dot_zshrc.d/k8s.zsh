@@ -12,7 +12,7 @@ function minikube() {
 
 function skaffold() {
     unfunction skaffold
-    _asdf_tool skaffold 1.10.1
+    _asdf_tool skaffold 1.20.0
     source <(skaffold completion zsh)
     skaffold $@
 }
