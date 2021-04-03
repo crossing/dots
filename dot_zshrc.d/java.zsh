@@ -1,10 +1,5 @@
 _asdf_tool java adoptopenjdk-11.0.9+11
-
-function maven() {
-  unfunction maven
-  _asdf_tool maven 3.6.3
-  maven $@
-}
+_asdf_tool maven 3.6.3
 
 # set JAVA_HOME on every change directory
 function asdf_update_java_home {
