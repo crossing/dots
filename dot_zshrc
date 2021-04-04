@@ -4,6 +4,7 @@ path+=($HOME/.local/bin)
 if [ ! -d "$HOME/.zgen" ]; then
     git clone https://github.com/tarjoilija/zgen.git "${HOME}/.zgen"
 fi
+export ZGEN_RESET_ON_CHANGE=($HOME/.zshrc $HOME/.zshrc.d/*)
 source "${HOME}/.zgen/zgen.zsh"
 
 _zgen_omz() {
@@ -23,6 +24,7 @@ _zgen_load() {
 
 if ! zgen saved; then
     zgen oh-my-zsh
+    zgen load unixorn/autoupdate-zgen
 fi
 
 for d in $HOME/.zshrc.d/*; do
@@ -32,8 +34,3 @@ done
 if ! zgen saved; then
     zgen save
 fi
-
-compinit -i
-typeset -U path
-typeset -U fpath
-
