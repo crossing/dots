@@ -7,12 +7,6 @@ _asdf_tool helm 3.2.1
 _asdf_tool kustomize 3.8.0
 _asdf_tool k9s 0.24.7
 
-function skaffold() {
-    unfunction skaffold
-    source <(skaffold completion zsh)
-    skaffold $@
-}
-
 function eksctl() {
     unfunction eksctl
     eksctl completion zsh > $HOME/.zfunc/_eksctl
@@ -34,3 +28,5 @@ function kustomize() {
 
 _zgen_omz kubectl
 _zgen_omz helm
+_zgen_omz minikube
+_zgen_my skaffold
