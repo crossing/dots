@@ -4,7 +4,7 @@ path+=($HOME/.local/bin)
 if [ ! -d "$HOME/.zgen" ]; then
     git clone https://github.com/tarjoilija/zgen.git "${HOME}/.zgen"
 fi
-export ZGEN_RESET_ON_CHANGE=($HOME/.zshrc $HOME/.zshrc.d/*)
+export ZGEN_RESET_ON_CHANGE=($HOME/.zshrc $HOME/.zshrc.d/**/*)
 source "${HOME}/.zgen/zgen.zsh"
 
 _zgen_omz() {
@@ -29,8 +29,8 @@ _zgen_my() {
 
 if ! zgen saved; then
     zgen oh-my-zsh
-    zgen load unixorn/autoupdate-zgen
 fi
+_zgen_load unixorn/autoupdate-zgen
 
 for d in $HOME/.zshrc.d/*; do
     source $d
