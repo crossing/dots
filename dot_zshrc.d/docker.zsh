@@ -1,1 +1,1 @@
-antibody bundle docker/cli path:contrib/completion/zsh kind:fpath
+_zgen_load docker/cli

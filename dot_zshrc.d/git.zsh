@@ -1,7 +1,7 @@
-_omz_plugin git
-_omz_plugin git-extras
+_zgen_omz git
+_zgen_omz git-extras
 
-_asdf_tool github-cli 1.6.1
+_asdf_tool github-cli 1.8.1
 
 function gh() {
     unfunction gh

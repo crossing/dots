@@ -11,7 +11,7 @@ function update_aws() {
 if ! (( $+commands[aws] )); then
     update_aws
 fi
-_omz_plugin aws
+_zgen_omz aws
 
 if ! (( $+commands[oidc] )); then
     pipx install https://github.com/crossing/oidc-cli/releases/download/v0.1.2/oidc-cli-0.1.2.tar.gz
@@ -24,4 +24,4 @@ if ! ( which aws-vault > /dev/null 2>&1 &&
     curl -L https://github.com/99designs/aws-vault/releases/download/v${AWS_VAULT_VERSION}/aws-vault-linux-amd64 -o $HOME/.local/bin/aws-vault
     chmod +x $HOME/.local/bin/aws-vault
 fi
-antibody bundle blimmer/zsh-aws-vault
+_zgen_load blimmer/zsh-aws-vault

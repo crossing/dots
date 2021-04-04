@@ -5,7 +5,7 @@ if [ ! -d "$HOME/.asdf" ]; then
     popd
 fi
 
-_omz_plugin asdf
+_zgen_omz asdf
 
 _asdf_tool() {
     local plugin=$1

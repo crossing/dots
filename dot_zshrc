@@ -1,29 +1,37 @@
 mkdir -p $HOME/.local/bin
 path+=($HOME/.local/bin)
 
-if ! (( $+commands[antibody] )); then
-   curl -sfL git.io/antibody | sh -s - -b $HOME/.local/bin
+if [ ! -d "$HOME/.zgen" ]; then
+    git clone https://github.com/tarjoilija/zgen.git "${HOME}/.zgen"
 fi
+source "${HOME}/.zgen/zgen.zsh"
 
-source <(antibody init)
-ANTIBODY_HOME="$(antibody home)"
-
-autoload -U +X compinit && compinit
-autoload -U +X bashcompinit && bashcompinit
-
-ZSH="$ANTIBODY_HOME"/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh
-ZSH_CACHE_DIR="$HOME/.cache/zsh_cache"
-mkdir -p $ZSH_CACHE_DIR
-
-_omz_plugin() {
+_zgen_omz() {
     local plugin=$1
-    antibody bundle robbyrussell/oh-my-zsh path:plugins/$plugin
-    antibody bundle robbyrussell/oh-my-zsh path:plugins/$plugin kind:fpath
+    local plugin_or_theme=${2:-plugins}
+    if ! zgen saved; then
+        zgen oh-my-zsh $plugin_or_theme/$plugin
+    fi
 }
+
+_zgen_load() {
+    local plugin=$1
+    if ! zgen saved; then
+        zgen load $1
+    fi
+}
+
+if ! zgen saved; then
+    zgen oh-my-zsh
+fi
 
 for d in $HOME/.zshrc.d/*; do
     source $d
 done
+
+if ! zgen saved; then
+    zgen save
+fi
 
 compinit -i
 typeset -U path

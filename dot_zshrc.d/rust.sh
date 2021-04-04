@@ -1,5 +1,5 @@
 export RUSTUP_HOME=$HOME/.rustup
-export PATH=$HOME/.cargo/bin:$PATH
+path+=($HOME/.cargo/bin)
 
 if ! (( $+commands[rustup] )); then
     curl \
@@ -9,6 +9,6 @@ if ! (( $+commands[rustup] )); then
     bash -s -- -v -y --no-modify-path --default-toolchain none
 fi
 
-_omz_plugin rustup
-_omz_plugin rust
-_omz_plugin cargo
+_zgen_omz rustup
+_zgen_omz rust
+_zgen_omz cargo

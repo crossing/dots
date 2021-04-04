@@ -37,5 +37,5 @@ function k9s() {
     k9s $@
 }
 
-_omz_plugin kubectl
-_omz_plugin helm
+_zgen_omz kubectl
+_zgen_omz helm
