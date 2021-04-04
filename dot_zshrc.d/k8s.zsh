@@ -32,10 +32,5 @@ function kustomize() {
     kustomize $@
 }
 
-function k9s() {
-    unfunction k9s
-    k9s $@
-}
-
 _zgen_omz kubectl
 _zgen_omz helm
