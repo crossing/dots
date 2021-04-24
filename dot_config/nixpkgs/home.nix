@@ -7,6 +7,9 @@
 
   home.username = "xing";
   home.homeDirectory = "/home/xing";
+  home.packages = [
+    pkgs._1password
+  ];
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
