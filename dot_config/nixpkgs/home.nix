@@ -9,6 +9,7 @@
   home.homeDirectory = "/home/xing";
   home.packages = [
     pkgs._1password
+    pkgs.aws-vault
   ];
 
   # This value determines the Home Manager release that your

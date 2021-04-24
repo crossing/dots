@@ -18,10 +18,4 @@ if ! (( $+commands[oidc] )); then
 fi
 
 # aws-vault
-AWS_VAULT_VERSION=6.2.0
-if ! ( which aws-vault > /dev/null 2>&1 &&
-       aws-vault --version 2>&1 | grep -w "v${AWS_VAULT_VERSION}" > /dev/null ); then
-    curl -L https://github.com/99designs/aws-vault/releases/download/v${AWS_VAULT_VERSION}/aws-vault-linux-amd64 -o $HOME/.local/bin/aws-vault
-    chmod +x $HOME/.local/bin/aws-vault
-fi
 _zgen_load blimmer/zsh-aws-vault
