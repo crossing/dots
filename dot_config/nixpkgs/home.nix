@@ -37,6 +37,26 @@
           sha256 = "1if81f6xl1h5hsqp68zl95lkk1gdypipck1pxz5v9fi5m6q7q8ng";
         };
       }
+      {
+        name = "zsh-nix-shell";
+        file = "nix-shell.plugin.zsh";
+        src = pkgs.fetchFromGitHub {
+          owner = "chisui";
+          repo = "zsh-nix-shell";
+          rev = "v0.1.0";
+          sha256 = "0snhch9hfy83d4amkyxx33izvkhbwmindy0zjjk28hih1a9l2jmx";
+        };
+      }
+      {
+        name = "nix-zsh-completion";
+        file = "init.zsh";
+        src = pkgs.fetchFromGitHub {
+          owner = "spwhitt";
+          repo = "nix-zsh-completions";
+          rev = "0.4.4";
+          sha256 = "0snhch9hfy83d4amkyxx33izvkhbwmindy0zjjk28hih1a9l2jmx";
+        };
+      }
     ];
   };
 
