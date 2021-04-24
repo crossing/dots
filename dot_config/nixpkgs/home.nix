@@ -1,16 +1,32 @@
 { config, pkgs, ... }:
-
 {
-  # Let Home Manager install and manage itself.
-  programs.home-manager.enable = true;
-  programs.gh.enable = true;
-
   home.username = "xing";
   home.homeDirectory = "/home/xing";
   home.packages = [
     pkgs._1password
     pkgs.aws-vault
   ];
+
+  # Let Home Manager install and manage itself.
+  programs.home-manager.enable = true;
+  programs.gh.enable = true;
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    enableAutosuggestions = true;
+    initExtra = "source $HOME/.zshrc.legacy";
+    plugins = [
+      {
+        name = "zsh-aws-vault";
+        src = pkgs.fetchFromGitHub {
+          owner = "blimmer";
+          repo = "zsh-aws-vault";
+          rev = "5f2f1a67e34661b7c9604d574ac0b3d554c124fe";
+          sha256 = "1if81f6xl1h5hsqp68zl95lkk1gdypipck1pxz5v9fi5m6q7q8ng";
+        };
+      }
+    ];
+  };
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
