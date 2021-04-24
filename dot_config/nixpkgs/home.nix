@@ -5,6 +5,7 @@
   home.packages = [
     pkgs._1password
     pkgs.aws-vault
+    pkgs.awscli2
   ];
 
   # Let Home Manager install and manage itself.
@@ -15,6 +16,17 @@
     enableCompletion = true;
     enableAutosuggestions = true;
     initExtra = "source $HOME/.zshrc.legacy";
+
+    zplug = {
+      enable = true;
+      plugins = [
+        {
+          name = "plugins/aws";
+          tags = ["from:oh-my-zsh"];
+        }
+      ];
+    };
+
     plugins = [
       {
         name = "zsh-aws-vault";
