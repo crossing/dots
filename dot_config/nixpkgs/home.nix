@@ -1,4 +1,7 @@
 { config, pkgs, ... }:
+let
+  sources = import ./nix/sources.nix;
+in
 {
   home.username = "xing";
   home.homeDirectory = "/home/xing";
@@ -30,32 +33,17 @@
     plugins = [
       {
         name = "zsh-aws-vault";
-        src = pkgs.fetchFromGitHub {
-          owner = "blimmer";
-          repo = "zsh-aws-vault";
-          rev = "5f2f1a67e34661b7c9604d574ac0b3d554c124fe";
-          sha256 = "1if81f6xl1h5hsqp68zl95lkk1gdypipck1pxz5v9fi5m6q7q8ng";
-        };
+        src = sources.zsh-aws-vault;
       }
       {
         name = "zsh-nix-shell";
         file = "nix-shell.plugin.zsh";
-        src = pkgs.fetchFromGitHub {
-          owner = "chisui";
-          repo = "zsh-nix-shell";
-          rev = "v0.1.0";
-          sha256 = "0snhch9hfy83d4amkyxx33izvkhbwmindy0zjjk28hih1a9l2jmx";
-        };
+        src =  sources.zsh-nix-shell;
       }
       {
-        name = "nix-zsh-completion";
+        name = "nix-zsh-completions";
         file = "init.zsh";
-        src = pkgs.fetchFromGitHub {
-          owner = "spwhitt";
-          repo = "nix-zsh-completions";
-          rev = "0.4.4";
-          sha256 = "0snhch9hfy83d4amkyxx33izvkhbwmindy0zjjk28hih1a9l2jmx";
-        };
+        src = sources.nix-zsh-completions;
       }
     ];
   };

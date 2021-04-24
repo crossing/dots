@@ -1,0 +1,50 @@
+{
+    "niv": {
+        "branch": "master",
+        "description": "Easy dependency management for Nix projects",
+        "homepage": "https://github.com/nmattia/niv",
+        "owner": "nmattia",
+        "repo": "niv",
+        "rev": "af958e8057f345ee1aca714c1247ef3ba1c15f5e",
+        "sha256": "1qjavxabbrsh73yck5dcq8jggvh3r2jkbr6b5nlz5d9yrqm9255n",
+        "type": "tarball",
+        "url": "https://github.com/nmattia/niv/archive/af958e8057f345ee1aca714c1247ef3ba1c15f5e.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "nix-zsh-completions": {
+        "branch": "master",
+        "description": "ZSH Completions for Nix",
+        "homepage": null,
+        "owner": "spwhitt",
+        "repo": "nix-zsh-completions",
+        "rev": "0.4.4",
+        "sha256": "1n9whlys95k4wc57cnz3n07p7zpkv796qkmn68a50ygkx6h3afqf",
+        "type": "tarball",
+        "url": "https://github.com/spwhitt/nix-zsh-completions/archive/0.4.4.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "zsh-aws-vault": {
+        "branch": "master",
+        "description": "oh-my-zsh plugin for aws-vault",
+        "homepage": null,
+        "owner": "blimmer",
+        "repo": "zsh-aws-vault",
+        "rev": "5f2f1a67e34661b7c9604d574ac0b3d554c124fe",
+        "sha256": "1if81f6xl1h5hsqp68zl95lkk1gdypipck1pxz5v9fi5m6q7q8ng",
+        "type": "tarball",
+        "url": "https://github.com/blimmer/zsh-aws-vault/archive/5f2f1a67e34661b7c9604d574ac0b3d554c124fe.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "zsh-nix-shell": {
+        "branch": "master",
+        "description": "zsh plugin that lets you use zsh in nix-shell shells.",
+        "homepage": "",
+        "owner": "chisui",
+        "repo": "zsh-nix-shell",
+        "rev": "v0.1.0",
+        "sha256": "0snhch9hfy83d4amkyxx33izvkhbwmindy0zjjk28hih1a9l2jmx",
+        "type": "tarball",
+        "url": "https://github.com/chisui/zsh-nix-shell/archive/v0.1.0.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    }
+}
