@@ -1,15 +1,9 @@
 { config, pkgs, ... }:
-let
-  sources = import ./nix/sources.nix;
-in
-{
+let sources = import ./nix/sources.nix;
+in {
   home.username = "xing";
   home.homeDirectory = "/home/xing";
-  home.packages = [
-    pkgs._1password
-    pkgs.aws-vault
-    pkgs.awscli2
-  ];
+  home.packages = [ pkgs._1password pkgs.aws-vault pkgs.awscli2 pkgs.nixfmt ];
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
@@ -22,12 +16,10 @@ in
 
     zplug = {
       enable = true;
-      plugins = [
-        {
-          name = "plugins/aws";
-          tags = ["from:oh-my-zsh"];
-        }
-      ];
+      plugins = [{
+        name = "plugins/aws";
+        tags = [ "from:oh-my-zsh" ];
+      }];
     };
 
     plugins = [
@@ -38,7 +30,7 @@ in
       {
         name = "zsh-nix-shell";
         file = "nix-shell.plugin.zsh";
-        src =  sources.zsh-nix-shell;
+        src = sources.zsh-nix-shell;
       }
       {
         name = "nix-zsh-completions";
