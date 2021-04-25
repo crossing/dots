@@ -5,6 +5,7 @@ in {
   home.homeDirectory = "/home/xing";
   home.packages = [
     # essential
+    pkgs.chezmoi
     pkgs.zsh-completions
 
     # utils

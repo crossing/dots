@@ -11,7 +11,7 @@ if [ ! -f /etc/profile.d/nix.sh ]; then
 fi
 
 source /etc/profile.d/nix.sh
-if [ ! (nix-channel --list | grep nixos-20.09 > /dev/null) ]; then
+if [ ! (nix-channel --list | grep home-manager > /dev/null) ]; then
   nix-channel --add https://github.com/nix-community/home-manager/archive/release-20.09.tar.gz home-manager
   nix-channel --update
 fi
@@ -19,5 +19,5 @@ fi
 export NIX_PATH=$HOME/.nix-defexpr/channels${NIX_PATH:+:}$NIX_PATH
 nix-shell '<home-manager>' -A install
 
-$HOME/.local/bin/chezmoi init https://github.com/crossing/dots.git --apply
+nix run nixpkgs.chezmoi -c chezmoi init https://github.com/crossing/dots.git --apply
 home-manager switch
