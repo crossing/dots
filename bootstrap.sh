@@ -2,9 +2,6 @@
 
 set -euo pipefail
 
-mkdir -p $HOME/.local/bin
-curl -sfL https://git.io/chezmoi | sh -s - -b $HOME/.local/bin
-
 if [ ! -f /etc/profile.d/nix.sh ]; then
     echo "Nix is not installed. Bail out.";
     exit 1;
