@@ -5,6 +5,7 @@ in {
   home.homeDirectory = "/home/xing";
   home.packages = [
     # utils
+    pkgs.fasd
     pkgs._1password
     pkgs.nixfmt
 
@@ -50,17 +51,23 @@ in {
       eval "$(register-python-argcomplete az)"
       eval "$(register-python-argcomplete gcloud)"
     '';
+
     envExtra = ''
       source /etc/profile.d/nix.sh
       export NIX_PATH=$HOME/.nix-defexpr/channels''${NIX_PATH:+:}$NIX_PATH
     '';
+
+    shellAliases = {
+      j = "z";
+      jj = "zz";
+    };
 
     zplug = {
       enable = true;
       plugins = map (p: {
         name = "plugins/${p}";
         tags = [ "from:oh-my-zsh" ];
-      }) [ "git" "git-extra" "docker" "ansible" "kubectl" "helm" ];
+      }) [ "git" "git-extra" "docker" "ansible" "kubectl" "helm" "fasd" ];
     };
 
     plugins = [
