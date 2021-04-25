@@ -72,7 +72,17 @@ in {
       plugins = map (p: {
         name = "plugins/${p}";
         tags = [ "from:oh-my-zsh" ];
-      }) [ "git" "git-extra" "docker" "ansible" "kubectl" "helm" "fasd" ];
+      }) [
+        "git"
+        "git-extra"
+        "docker"
+        "ansible"
+        "kubectl"
+        "helm"
+        "fasd"
+        "python"
+        "pip"
+      ];
     };
 
     plugins = [
