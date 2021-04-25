@@ -1,8 +1,8 @@
 { config, pkgs, lib, ... }:
 let sources = import ./nix/sources.nix;
 in {
-  home.username = "xing";
-  home.homeDirectory = "/home/xing";
+  home.username = builtins.getEnv "USER";
+  home.homeDirectory = builtins.getEnv "HOME";
   home.packages = [
     # essential
     pkgs.chezmoi
