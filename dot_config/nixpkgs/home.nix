@@ -25,7 +25,12 @@ in {
     enable = true;
     enableCompletion = true;
     enableAutosuggestions = true;
+
     initExtra = "source $HOME/.zshrc.legacy";
+    envExtra = ''
+      source /etc/profile.d/nix.sh
+      export NIX_PATH=$HOME/.nix-defexpr/channels$${NIX_PATH:+:}$NIX_PATH
+    '';
 
     zplug = {
       enable = true;
