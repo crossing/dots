@@ -1,7 +1,3 @@
-_zgen_load zsh-users/zsh-syntax-highlighting
-_zgen_load zsh-users/zsh-completions
-_zgen_omz robbyrussell.zsh-theme themes
-
 # editor
 export EDITOR='code --wait'
 

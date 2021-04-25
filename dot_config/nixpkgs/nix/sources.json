@@ -11,18 +11,6 @@
         "url": "https://github.com/nmattia/niv/archive/af958e8057f345ee1aca714c1247ef3ba1c15f5e.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
-    "nix-zsh-completions": {
-        "branch": "master",
-        "description": "ZSH Completions for Nix",
-        "homepage": null,
-        "owner": "spwhitt",
-        "repo": "nix-zsh-completions",
-        "rev": "0.4.4",
-        "sha256": "1n9whlys95k4wc57cnz3n07p7zpkv796qkmn68a50ygkx6h3afqf",
-        "type": "tarball",
-        "url": "https://github.com/spwhitt/nix-zsh-completions/archive/0.4.4.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
-    },
     "zsh-aws-vault": {
         "branch": "master",
         "description": "oh-my-zsh plugin for aws-vault",
@@ -45,6 +33,18 @@
         "sha256": "0snhch9hfy83d4amkyxx33izvkhbwmindy0zjjk28hih1a9l2jmx",
         "type": "tarball",
         "url": "https://github.com/chisui/zsh-nix-shell/archive/v0.1.0.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "zsh-syntax-highlighting": {
+        "branch": "master",
+        "description": "Fish shell like syntax highlighting for Zsh.",
+        "homepage": "github.com/zsh-users/zsh-syntax-highlighting",
+        "owner": "zsh-users",
+        "repo": "zsh-syntax-highlighting",
+        "rev": "ebef4e55691f62e630318d56468e5798367aa81c",
+        "sha256": "0qimb90655hkm64mjqcn48kqq38cbfxlfhs324cbdi9gqpdi6q4b",
+        "type": "tarball",
+        "url": "https://github.com/zsh-users/zsh-syntax-highlighting/archive/ebef4e55691f62e630318d56468e5798367aa81c.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }

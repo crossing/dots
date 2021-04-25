@@ -4,6 +4,9 @@ in {
   home.username = "xing";
   home.homeDirectory = "/home/xing";
   home.packages = [
+    # essential
+    pkgs.zsh-completions
+
     # utils
     pkgs.fasd
     pkgs._1password
@@ -43,13 +46,15 @@ in {
     enableAutosuggestions = true;
 
     initExtra = ''
-      source $HOME/.zshrc.legacy
-      eval "$(starship init zsh)"
       autoload -U bashcompinit && bashcompinit
-
+      eval "$(starship init zsh)"
       eval "$(register-python-argcomplete pipx)"
       eval "$(register-python-argcomplete az)"
       eval "$(register-python-argcomplete gcloud)"
+    '';
+
+    initExtraBeforeCompInit = ''
+      source $HOME/.zshrc.legacy
     '';
 
     envExtra = ''
@@ -81,9 +86,8 @@ in {
         src = sources.zsh-nix-shell;
       }
       {
-        name = "nix-zsh-completions";
-        file = "init.zsh";
-        src = sources.nix-zsh-completions;
+        name = "zsh-syntax-highlighting";
+        src = sources.zsh-syntax-highlighting;
       }
     ];
   };

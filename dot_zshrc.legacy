@@ -22,11 +22,6 @@ _zgen_load() {
     fi
 }
 
-_zgen_my() {
-    local plugin=$1
-    _zgen_load $HOME/.zshrc.d/plugins/$plugin
-}
-
 if ! zgen saved; then
     zgen oh-my-zsh
 fi
