@@ -16,6 +16,9 @@ in {
     pkgs.eksctl
     pkgs.skaffold
     pkgs.minikube
+    pkgs.poetry
+    pkgs.python39Packages.argcomplete
+    pkgs.python39Packages.pipx
   ];
 
   # Let Home Manager install and manage itself.
@@ -29,6 +32,8 @@ in {
     initExtra = ''
       source $HOME/.zshrc.legacy
       eval "$(starship init zsh)"
+      autoload -U bashcompinit && bashcompinit
+      eval "$(register-python-argcomplete pipx)"
     '';
     envExtra = ''
       source /etc/profile.d/nix.sh

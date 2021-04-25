@@ -20,10 +20,6 @@ if [ ! -d $HOME/.emacs.d ]; then
 fi
 _zgen_omz emacs
 
-# zfunc
-mkdir -p $HOME/.zfunc
-fpath+=$HOME/.zfunc
-
 # snap
 if (which snap 1>/dev/null 2>/dev/null); then
     path+=(/var/lib/snapd/bin /snap/bin)
