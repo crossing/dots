@@ -16,10 +16,10 @@ in {
 
     zplug = {
       enable = true;
-      plugins = [{
-        name = "plugins/aws";
+      plugins = map (p: {
+        name = "plugins/${p}";
         tags = [ "from:oh-my-zsh" ];
-      }];
+      }) [ "aws" "git" "git-extra" "docker" ];
     };
 
     plugins = [
