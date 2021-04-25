@@ -6,7 +6,7 @@ _zgen_omz robbyrussell.zsh-theme themes
 export EDITOR='code --wait'
 
 # fasd
-if ! (which fasd > /dev/null); then 
+if ! (which fasd > /dev/null); then
     curl -sSL https://raw.githubusercontent.com/clvv/fasd/master/fasd -o $HOME/.local/bin/fasd
     chmod +x $HOME/.local/bin/fasd
 fi
@@ -28,9 +28,3 @@ fpath+=$HOME/.zfunc
 if (which snap 1>/dev/null 2>/dev/null); then
     path+=(/var/lib/snapd/bin /snap/bin)
 fi
-
-# starship
-if ! (( $+commands[starship] )); then
-    curl -fsSL https://starship.rs/install.sh | bash -s - -b $HOME/.local/bin -f
-fi
-eval "$(starship init zsh)"

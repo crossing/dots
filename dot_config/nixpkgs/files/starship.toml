@@ -10,7 +10,7 @@ $line_break\
 $character"""
 
 [kubernetes]
-format = 'on [⛵ $context \($namespace\)](dimmed green) ' 
+format = 'on [⛵ $context \($namespace\)](dimmed green) '
 disabled = false
 
 [character]
@@ -28,7 +28,7 @@ discharging_symbol = ""
 [conda]
 symbol = " "
 
-[docker]
+[docker_context]
 symbol = " "
 
 [elixir]
@@ -42,9 +42,6 @@ symbol = " "
 
 [golang]
 symbol = " "
-
-[haskell]
-symbol = " "
 
 [hg_branch]
 symbol = " "

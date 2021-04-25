@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 let sources = import ./nix/sources.nix;
 in {
   home.username = "xing";
@@ -38,6 +38,10 @@ in {
         src = sources.nix-zsh-completions;
       }
     ];
+  };
+  programs.starship = {
+    enable = true;
+    settings = lib.importTOML ./files/starship.toml;
   };
 
   # This value determines the Home Manager release that your
