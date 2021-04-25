@@ -4,11 +4,20 @@ in {
   home.username = "xing";
   home.homeDirectory = "/home/xing";
   home.packages = [
+    # utils
     pkgs._1password
+    pkgs.nixfmt
+
+    # cloud
     pkgs.aws-vault
     pkgs.awscli2
-    pkgs.nixfmt
+    pkgs.azure-cli
+    pkgs.google-cloud-sdk
+
+    # ops
     pkgs.ansible
+
+    # k8s
     pkgs.kubectl
     pkgs.kubernetes-helm
     pkgs.kustomize
@@ -16,6 +25,9 @@ in {
     pkgs.eksctl
     pkgs.skaffold
     pkgs.minikube
+
+    # python
+    pkgs.python3
     pkgs.poetry
     pkgs.python39Packages.argcomplete
     pkgs.python39Packages.pipx
@@ -33,7 +45,10 @@ in {
       source $HOME/.zshrc.legacy
       eval "$(starship init zsh)"
       autoload -U bashcompinit && bashcompinit
+
       eval "$(register-python-argcomplete pipx)"
+      eval "$(register-python-argcomplete az)"
+      eval "$(register-python-argcomplete gcloud)"
     '';
     envExtra = ''
       source /etc/profile.d/nix.sh
