@@ -26,7 +26,10 @@ in {
     enableCompletion = true;
     enableAutosuggestions = true;
 
-    initExtra = "source $HOME/.zshrc.legacy";
+    initExtra = ''
+      source $HOME/.zshrc.legacy
+      eval "$(starship init zsh)"
+    '';
     envExtra = ''
       source /etc/profile.d/nix.sh
       export NIX_PATH=$HOME/.nix-defexpr/channels''${NIX_PATH:+:}$NIX_PATH
