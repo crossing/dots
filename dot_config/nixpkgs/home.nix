@@ -3,8 +3,20 @@ let sources = import ./nix/sources.nix;
 in {
   home.username = "xing";
   home.homeDirectory = "/home/xing";
-  home.packages =
-    [ pkgs._1password pkgs.aws-vault pkgs.awscli2 pkgs.nixfmt pkgs.ansible ];
+  home.packages = [
+    pkgs._1password
+    pkgs.aws-vault
+    pkgs.awscli2
+    pkgs.nixfmt
+    pkgs.ansible
+    pkgs.kubectl
+    pkgs.kubernetes-helm
+    pkgs.kustomize
+    pkgs.k9s
+    pkgs.eksctl
+    pkgs.skaffold
+    pkgs.minikube
+  ];
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
@@ -20,7 +32,7 @@ in {
       plugins = map (p: {
         name = "plugins/${p}";
         tags = [ "from:oh-my-zsh" ];
-      }) [ "aws" "git" "git-extra" "docker" "ansible" ];
+      }) [ "aws" "git" "git-extra" "docker" "ansible" "kubectl" "helm" ];
     };
 
     plugins = [

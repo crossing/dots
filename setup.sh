@@ -12,7 +12,6 @@ fi
 
 source /etc/profile.d/nix.sh
 if [ ! (nix-channel --list | grep nixos-20.09 > /dev/null) ]; then
-  nix-channel --add https://nixos.org/channels/nixos-20.09
   nix-channel --add https://github.com/nix-community/home-manager/archive/release-20.09.tar.gz home-manager
   nix-channel --update
 fi
