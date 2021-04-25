@@ -36,6 +36,9 @@ in {
     pkgs.poetry
     pkgs.python39Packages.argcomplete
     pkgs.python39Packages.pipx
+
+    # java
+    pkgs.jdk11
   ];
 
   # Let Home Manager install and manage itself.
