@@ -21,6 +21,9 @@ in {
 
     # ops
     pkgs.ansible
+    pkgs.vagrant
+    pkgs.terraform_0_15
+    pkgs.tflint
 
     # k8s
     pkgs.kubectl
@@ -39,6 +42,8 @@ in {
 
     # java
     pkgs.jdk11
+
+    pkgs.consul
   ];
 
   # Let Home Manager install and manage itself.
@@ -86,6 +91,8 @@ in {
         "fasd"
         "python"
         "pip"
+        "terraform"
+        "vagrant"
       ];
     };
 
