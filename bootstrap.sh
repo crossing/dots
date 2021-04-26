@@ -8,7 +8,7 @@ if [ ! -f /etc/profile.d/nix.sh ]; then
 fi
 
 source /etc/profile.d/nix.sh
-if [ ! (nix-channel --list | grep home-manager > /dev/null) ]; then
+if ! (nix-channel --list | grep home-manager > /dev/null); then
   nix-channel --add https://github.com/nix-community/home-manager/archive/release-20.09.tar.gz home-manager
   nix-channel --update
 fi
