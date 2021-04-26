@@ -35,7 +35,7 @@ in {
     pkgs.minikube
 
     # python
-    pkgs.python3
+    pkgs.python39
     pkgs.poetry
     pkgs.python39Packages.argcomplete
     pkgs.python39Packages.pipx
@@ -67,8 +67,10 @@ in {
     '';
 
     envExtra = ''
-      source /etc/profile.d/nix.sh
-      export NIX_PATH=$HOME/.nix-defexpr/channels''${NIX_PATH:+:}$NIX_PATH
+      if [ -z "$IN_NIX_SHELL" ]; then
+        source /etc/profile.d/nix.sh
+        export NIX_PATH=$HOME/.nix-defexpr/channels''${NIX_PATH:+:}$NIX_PATH
+      fi
     '';
 
     shellAliases = {

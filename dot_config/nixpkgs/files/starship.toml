@@ -1,5 +1,6 @@
 add_newline = true
 format = """
+$nix_shell\
 $directory\
 $git_branch\
 $git_commit\
