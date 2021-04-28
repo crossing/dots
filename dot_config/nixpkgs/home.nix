@@ -1,6 +1,8 @@
 { config, pkgs, lib, ... }:
 let sources = import ./nix/sources.nix;
 in {
+  targets.genericLinux.enable = true;
+
   home.username = builtins.getEnv "USER";
   home.homeDirectory = builtins.getEnv "HOME";
   home.packages = [
@@ -64,13 +66,6 @@ in {
 
     initExtraBeforeCompInit = ''
       source $HOME/.zshrc.legacy
-    '';
-
-    envExtra = ''
-      if [ -z "$IN_NIX_SHELL" ]; then
-        source /etc/profile.d/nix.sh
-        export NIX_PATH=$HOME/.nix-defexpr/channels''${NIX_PATH:+:}$NIX_PATH
-      fi
     '';
 
     shellAliases = {
