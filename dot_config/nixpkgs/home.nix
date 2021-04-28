@@ -2,6 +2,8 @@
 let sources = import ./nix/sources.nix;
 in {
   targets.genericLinux.enable = true;
+  fonts.fontconfig.enable = true;
+  news.display = "silent";
 
   home.username = builtins.getEnv "USER";
   home.homeDirectory = builtins.getEnv "HOME";
@@ -9,6 +11,7 @@ in {
     # essential
     pkgs.chezmoi
     pkgs.zsh-completions
+    pkgs.nerdfonts
 
     # utils
     pkgs.fasd
@@ -109,6 +112,7 @@ in {
       }
     ];
   };
+
   programs.starship = {
     enable = true;
     settings = lib.importTOML ./files/starship.toml;
