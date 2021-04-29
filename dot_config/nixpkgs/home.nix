@@ -10,7 +10,6 @@ in {
   home.packages = [
     # essential
     pkgs.chezmoi
-    pkgs.tree
     pkgs.zsh-completions
     pkgs.nerdfonts
 
@@ -18,6 +17,8 @@ in {
     pkgs.fasd
     pkgs._1password
     pkgs.nixfmt
+    pkgs.tree
+    pkgs.nix-tree
 
     # cloud
     pkgs.aws-vault
