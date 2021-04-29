@@ -10,6 +10,7 @@ in {
   home.packages = [
     # essential
     pkgs.chezmoi
+    pkgs.tree
     pkgs.zsh-completions
     pkgs.nerdfonts
 
