@@ -73,6 +73,10 @@ in {
       eval "$(register-python-argcomplete gcloud)"
     '';
 
+    envExtra = ''
+      source /etc/profile.d/nix.sh
+    '';
+
     initExtraBeforeCompInit = ''
       source $HOME/.zshrc.legacy
     '';
