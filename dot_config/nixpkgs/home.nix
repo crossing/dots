@@ -20,6 +20,9 @@ in {
     pkgs.tree
     pkgs.nix-tree
 
+    # dev
+    pkgs.gh
+
     # cloud
     pkgs.aws-vault
     pkgs.awscli2
@@ -50,12 +53,12 @@ in {
     # java
     pkgs.jdk11
 
+    # misc
     pkgs.consul
   ];
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
-  programs.gh.enable = true;
 
   programs.direnv.enable = true;
   programs.direnv.enableNixDirenvIntegration = true;
@@ -74,7 +77,7 @@ in {
     '';
 
     envExtra = ''
-      source /etc/profile.d/nix.sh
+      (( $+commands[nix] )) || source /etc/profile.d/nix.sh
     '';
 
     initExtraBeforeCompInit = ''
