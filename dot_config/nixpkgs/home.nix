@@ -22,6 +22,7 @@ in {
 
     # dev
     pkgs.gh
+    pkgs.glab
 
     # cloud
     pkgs.aws-vault
