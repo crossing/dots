@@ -27,6 +27,7 @@ in {
     # cloud
     pkgs.aws-vault
     pkgs.awscli2
+    pkgs.ssm-session-manager-plugin
     pkgs.azure-cli
     pkgs.google-cloud-sdk
 
