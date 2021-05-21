@@ -108,6 +108,7 @@ in {
         "pip"
         "terraform"
         "vagrant"
+        "aws"
       ];
     };
 
