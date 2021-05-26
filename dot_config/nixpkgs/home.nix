@@ -35,6 +35,7 @@ in {
     pkgs.ansible
     pkgs.vagrant
     pkgs.terraform_0_15
+    pkgs.terragrunt
     pkgs.tflint
 
     # k8s
