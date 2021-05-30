@@ -11,6 +11,18 @@
         "url": "https://github.com/nmattia/niv/archive/af958e8057f345ee1aca714c1247ef3ba1c15f5e.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
+    "oidc-cli": {
+        "branch": "master",
+        "description": "A simple utility to perform oidc authentication from command line",
+        "homepage": null,
+        "owner": "crossing",
+        "repo": "oidc-cli",
+        "rev": "d113294b8f77deb9f07b92b2fa322e6d22f73823",
+        "sha256": "0bwm9jzlwxyhjhcz09r34av4hyx22kyq2ycim6smv9prcjznjr52",
+        "type": "tarball",
+        "url": "https://github.com/crossing/oidc-cli/archive/d113294b8f77deb9f07b92b2fa322e6d22f73823.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "zsh-aws-vault": {
         "branch": "master",
         "description": "oh-my-zsh plugin for aws-vault",

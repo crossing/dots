@@ -58,6 +58,8 @@ in {
 
     # misc
     pkgs.consul
+
+    (import sources.oidc-cli { })
   ];
 
   # Let Home Manager install and manage itself.
