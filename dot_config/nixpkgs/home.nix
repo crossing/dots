@@ -7,6 +7,11 @@ in {
 
   home.username = builtins.getEnv "USER";
   home.homeDirectory = builtins.getEnv "HOME";
+  home.language.base = "en_GB.UTF-8";
+  home.sessionVariables = {
+    LOCALE_ARCHIVE_2_27 = "${pkgs.glibcLocales}/lib/locale/locale-archive";
+  };
+
   home.packages = [
     # nix
     pkgs.nixUnstable
