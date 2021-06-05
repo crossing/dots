@@ -8,6 +8,9 @@ in {
   home.username = builtins.getEnv "USER";
   home.homeDirectory = builtins.getEnv "HOME";
   home.packages = [
+    # nix
+    pkgs.nixUnstable
+
     # essential
     pkgs.chezmoi
     pkgs.zsh-completions
@@ -79,10 +82,6 @@ in {
       eval "$(register-python-argcomplete pipx)"
       eval "$(register-python-argcomplete az)"
       eval "$(register-python-argcomplete gcloud)"
-    '';
-
-    envExtra = ''
-      (( $+commands[nix] )) || source /etc/profile.d/nix.sh
     '';
 
     initExtraBeforeCompInit = ''
