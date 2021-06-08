@@ -18,6 +18,10 @@ in {
       source $HOME/.zshrc.legacy
     '';
 
+    envExtra = ''
+      (( $+commands[nix] )) || source /etc/profile.d/nix.sh
+    '';
+
     shellAliases = {
       j = "z";
       jj = "zz";
