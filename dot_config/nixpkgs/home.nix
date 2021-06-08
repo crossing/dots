@@ -61,7 +61,6 @@ in {
     pkgs.python39
     pkgs.poetry
     pkgs.python39Packages.argcomplete
-    pkgs.python39Packages.pipx
 
     # java
     pkgs.jdk11
