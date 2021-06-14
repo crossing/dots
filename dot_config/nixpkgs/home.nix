@@ -62,6 +62,9 @@ in {
     pkgs.poetry
     pkgs.python39Packages.argcomplete
 
+    # rust
+    pkgs.rustup
+
     # java
     pkgs.jdk11
 
