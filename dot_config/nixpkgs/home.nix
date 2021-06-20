@@ -1,5 +1,8 @@
-{ config, pkgs, lib, ... }:
-let sources = import ./nix/sources.nix;
+{ config, ... }:
+let
+  sources = import ./nix/sources.nix;
+  pkgs = import sources.nixpkgs { };
+  lib = pkgs.lib;
 in {
   imports = [ ./zsh.nix ];
 
@@ -44,7 +47,7 @@ in {
     # ops
     pkgs.ansible
     pkgs.vagrant
-    pkgs.terraform_0_15
+    pkgs.terraform
     pkgs.terragrunt
     pkgs.tflint
 
