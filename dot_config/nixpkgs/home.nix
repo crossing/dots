@@ -18,8 +18,7 @@ in {
   };
 
   home.packages = [
-    # nix
-    pkgs.nixUnstable
+    pkgs.nix
 
     # essential
     pkgs.chezmoi
@@ -79,10 +78,7 @@ in {
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
-
-  programs.direnv.enable = true;
-  programs.direnv.enableNixDirenvIntegration = true;
-
+  programs.direnv.nix-direnv.enable = true;
 
   programs.starship = {
     enable = true;
