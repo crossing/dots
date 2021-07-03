@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+chezmoi apply -v
+nix-channel --update
+home-manager switch
