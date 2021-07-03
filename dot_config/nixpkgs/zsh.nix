@@ -19,7 +19,7 @@ in {
     '';
 
     envExtra = ''
-      (( $+commands[nix] )) || source /etc/profile.d/nix.sh
+      export NIX_PATH=$HOME/.nix-defexpr/channels
     '';
 
     shellAliases = {
