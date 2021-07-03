@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -euo pipefail
+
 chezmoi apply -v
 nix-channel --update
 home-manager switch

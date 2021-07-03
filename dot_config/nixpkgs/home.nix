@@ -76,6 +76,14 @@ in {
     (import sources.oidc-cli { })
   ];
 
+  home.file = {
+    "hm-update" = {
+      source = ./files/hm-update;
+      target = ".local/bin/hm-update";
+      executable = true;
+    };
+  };
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
   programs.direnv.nix-direnv.enable = true;
