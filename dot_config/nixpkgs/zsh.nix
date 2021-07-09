@@ -9,7 +9,6 @@ in {
     initExtra = ''
       autoload -U bashcompinit && bashcompinit
       eval "$(starship init zsh)"
-      eval "$(register-python-argcomplete pipx)"
       eval "$(register-python-argcomplete az)"
       eval "$(register-python-argcomplete gcloud)"
     '';
@@ -19,6 +18,7 @@ in {
     '';
 
     envExtra = ''
+      . "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
       export NIX_PATH=$HOME/.nix-defexpr/channels
     '';
 

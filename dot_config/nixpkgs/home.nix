@@ -28,7 +28,7 @@ in {
     # utils
     pkgs.fasd
     pkgs._1password
-    pkgs.nixfmt
+    pkgs.nixpkgs-fmt
     pkgs.tree
     pkgs.nix-tree
 
@@ -61,7 +61,6 @@ in {
 
     # python
     pkgs.python39
-    pkgs.poetry
     pkgs.python39Packages.argcomplete
 
     # rust
