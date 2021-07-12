@@ -33,27 +33,35 @@ This function should only modify configuration layer settings."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
-     ;; ----------------------------------------------------------------
-     ;; Example of useful layers you may want to use right away.
-     ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
-     ;; `M-m f e R' (Emacs style) to install them.
-     ;; ----------------------------------------------------------------
-     auto-completion
-     better-defaults
-     emacs-lisp
-     git
-     helm
-     lsp
-     markdown
-     multiple-cursors
-     org
-     (shell :variables
-            shell-default-height 30
-            shell-default-position 'bottom)
-     spell-checking
-     syntax-checking
-     version-control
-     treemacs)
+      ;; ----------------------------------------------------------------
+      ;; Example of useful layers you may want to use right away.
+      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
+      ;; `M-m f e R' (Emacs style) to install them.
+      ;; ----------------------------------------------------------------
+      auto-completion
+      better-defaults
+      emacs-lisp
+      git
+      helm
+      (lsp :variables
+        lsp-lens-enable t
+        lsp-rust-server 'rust-analyzer
+        lsp-rust-analyzer-server-display-inlay-hints t
+        cargo-process-reload-on-modify t)
+      markdown
+      multiple-cursors
+      org
+      (shell :variables
+        shell-default-height 30
+        shell-default-position 'bottom)
+      spell-checking
+      syntax-checking
+      version-control
+      treemacs
+
+      (rust :variables
+        rust-format-on-save t)
+    )
 
 
    ;; List of additional packages that will be installed without being wrapped
@@ -64,7 +72,7 @@ This function should only modify configuration layer settings."
    ;; `dotspacemacs/user-config'. To use a local version of a package, use the
    ;; `:location' property: '(your-package :location "~/path/to/your-package/")
    ;; Also include the dependencies as they will not be resolved automatically.
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages '(direnv)
 
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -535,7 +543,8 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
   "Library to load while dumping.
 This function is called only while dumping Spacemacs configuration. You can
 `require' or `load' the libraries of your choice that will be included in the
-dump.")
+dump."
+  )
 
 
 (defun dotspacemacs/user-config ()
@@ -543,7 +552,8 @@ dump.")
 This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
-before packages are loaded.")
+before packages are loaded."
+  (direnv-mode))
 
 
 ;; Do not write anything past this comment. This is where Emacs will
