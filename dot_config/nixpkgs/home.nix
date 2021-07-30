@@ -48,6 +48,7 @@ in {
     pkgs.ansible
     pkgs.vagrant
     pkgs.terraform
+    pkgs.terraform-lsp
     pkgs.terragrunt
     pkgs.tflint
 
