@@ -27,6 +27,7 @@ in {
 
     # utils
     pkgs.fasd
+    pkgs.ranger
     pkgs._1password
     pkgs.nixpkgs-fmt
     pkgs.tree

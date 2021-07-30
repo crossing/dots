@@ -41,6 +41,7 @@ This function should only modify configuration layer settings."
       auto-completion
       better-defaults
       emacs-lisp
+      fasd
       git
       helm
       (lsp :variables
