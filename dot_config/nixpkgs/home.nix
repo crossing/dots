@@ -19,6 +19,7 @@ in {
 
   home.packages = [
     pkgs.nix
+    pkgs.niv
 
     # essential
     pkgs.chezmoi
