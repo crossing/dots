@@ -7,7 +7,9 @@ in {
     enableAutosuggestions = true;
 
     initExtra = ''
-      autoload -U bashcompinit && bashcompinit
+      autoload -Uz bashcompinit && bashcompinit
+      complete -C aws_completer aws
+
       eval "$(starship init zsh)"
       eval "$(register-python-argcomplete az)"
       eval "$(register-python-argcomplete gcloud)"
@@ -44,7 +46,6 @@ in {
         "pip"
         "terraform"
         "vagrant"
-        "aws"
       ];
     };
 
