@@ -28,6 +28,7 @@ in {
 
     # utils
     pkgs.fasd
+    pkgs.ripgrep
     pkgs.ranger
     pkgs._1password
     pkgs.nixpkgs-fmt
