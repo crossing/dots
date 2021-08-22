@@ -73,6 +73,8 @@ This function should only modify configuration layer settings."
       (rust :variables
         rust-format-on-save t)
       python
+      javascript
+      typescript
 
       (terraform :variables
         terraform-auto-format-on-save t)
