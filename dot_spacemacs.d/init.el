@@ -58,13 +58,7 @@ This function should only modify configuration layer settings."
       spell-checking
       syntax-checking
       version-control
-      (treemacs :variables
-        treemacs-use-follow-mode t
-        treemacs-use-filewatch-mode t
-        treemacs-use-git-mode 'deferred
-        treemacs-lock-width t
-        treemacs-use-all-the-icons-theme t
-        treemacs-use-scope-type 'Perspectives)
+      neotree
 
       nixos
 
@@ -570,7 +564,9 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
-  (direnv-mode))
+  (direnv-mode)
+  (setq neo-theme 'nerd)
+  (setq neo-vc-integration nil))
 
 
 ;; Do not write anything past this comment. This is where Emacs will
