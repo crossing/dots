@@ -1,6 +1,7 @@
 { config, pkgs, lib, ... }:
 let sources = import ./nix/sources.nix;
-in {
+in
+{
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -31,10 +32,11 @@ in {
 
     zplug = {
       enable = true;
-      plugins = map (p: {
-        name = "plugins/${p}";
-        tags = [ "from:oh-my-zsh" ];
-      }) [
+      plugins = map
+        (p: {
+          name = "plugins/${p}";
+          tags = [ "from:oh-my-zsh" ];
+        }) [
         "git"
         "git-extra"
         "docker"

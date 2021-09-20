@@ -1,9 +1,5 @@
-{ config, ... }:
-let
-  sources = import ./nix/sources.nix;
-  pkgs = import sources.nixpkgs { };
-  lib = pkgs.lib;
-in {
+{ config, pkgs, lib, ... }:
+{
   imports = [ ./zsh.nix ];
 
   targets.genericLinux.enable = true;
@@ -16,6 +12,8 @@ in {
   home.sessionVariables = {
     LOCALE_ARCHIVE_2_27 = "${pkgs.glibcLocales}/lib/locale/locale-archive";
   };
+
+  nixpkgs.overlays = (import ./overlays.nix);
 
   home.packages = [
     pkgs.nix
@@ -42,7 +40,6 @@ in {
     # cloud
     pkgs.aws-vault
     pkgs.awscli2
-    pkgs.ssm-session-manager-plugin
     pkgs.azure-cli
     pkgs.google-cloud-sdk
 
@@ -75,8 +72,10 @@ in {
 
     # misc
     pkgs.consul
+    pkgs.nodePackages.prettier
+    pkgs.nodePackages.vscode-json-languageserver
 
-    (import sources.oidc-cli { })
+    pkgs.oidc-cli
   ];
 
   home.file = {
@@ -109,5 +108,5 @@ in {
   # You can update Home Manager without changing this value. See
   # the Home Manager release notes for a list of state version
   # changes in each release.
-  home.stateVersion = "21.03";
+  home.stateVersion = "21.11";
 }

@@ -61,8 +61,14 @@ This function should only modify configuration layer settings."
       neotree
 
       nixos
+      systemd
+      ansible
 
       yaml
+      (json :variables
+        json-fmt-on-save t
+        json-fmt-tool 'prettier
+        json-backend 'lsp)
 
       (rust :variables
         rust-format-on-save t)
