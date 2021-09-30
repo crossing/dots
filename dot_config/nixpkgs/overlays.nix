@@ -15,5 +15,14 @@ in
     });
 
     oidc-cli = (import sources.oidc-cli { });
+
+    glab = super.glab.overrideAttrs (old: {
+      postInstall = ''
+        ${if (old ? postInstall ) then old.postInstall else ""}
+
+        mkdir -p $out/share/zsh/site-functions
+        $out/bin/glab completion -s zsh > $out/share/zsh/site-functions/_glab
+      '';
+    });
   })
 ]

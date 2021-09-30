@@ -11,6 +11,7 @@ in
       autoload -Uz bashcompinit && bashcompinit
       complete -C aws_completer aws
 
+      eval "$(glab completion -s zsh)"
       eval "$(starship init zsh)"
       eval "$(register-python-argcomplete az)"
       eval "$(register-python-argcomplete gcloud)"
