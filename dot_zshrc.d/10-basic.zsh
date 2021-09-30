@@ -1,5 +1,5 @@
 # editor
-export EDITOR='code --wait'
+export EDITOR='emacs'
 
 # emacs
 if [ ! -d $HOME/.emacs.d ]; then
