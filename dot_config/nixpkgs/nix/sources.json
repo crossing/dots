@@ -5,10 +5,10 @@
         "homepage": "https://github.com/nmattia/niv",
         "owner": "nmattia",
         "repo": "niv",
-        "rev": "af958e8057f345ee1aca714c1247ef3ba1c15f5e",
-        "sha256": "1qjavxabbrsh73yck5dcq8jggvh3r2jkbr6b5nlz5d9yrqm9255n",
+        "rev": "65a61b147f307d24bfd0a5cd56ce7d7b7cc61d2e",
+        "sha256": "17mirpsx5wyw262fpsd6n6m47jcgw8k2bwcp1iwdnrlzy4dhcgqh",
         "type": "tarball",
-        "url": "https://github.com/nmattia/niv/archive/af958e8057f345ee1aca714c1247ef3ba1c15f5e.tar.gz",
+        "url": "https://github.com/nmattia/niv/archive/65a61b147f307d24bfd0a5cd56ce7d7b7cc61d2e.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "oidc-cli": {
@@ -17,22 +17,22 @@
         "homepage": null,
         "owner": "crossing",
         "repo": "oidc-cli",
-        "rev": "d113294b8f77deb9f07b92b2fa322e6d22f73823",
-        "sha256": "0bwm9jzlwxyhjhcz09r34av4hyx22kyq2ycim6smv9prcjznjr52",
+        "rev": "e3bae61becbb62c764140570f38ee1b946743461",
+        "sha256": "0rra7wz31hjk34nam8g4q9bi76sizms3yzs27mwla9k4fs8sbb91",
         "type": "tarball",
-        "url": "https://github.com/crossing/oidc-cli/archive/d113294b8f77deb9f07b92b2fa322e6d22f73823.tar.gz",
+        "url": "https://github.com/crossing/oidc-cli/archive/e3bae61becbb62c764140570f38ee1b946743461.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "zsh-aws-vault": {
-        "branch": "master",
+        "branch": "main",
         "description": "oh-my-zsh plugin for aws-vault",
         "homepage": null,
         "owner": "blimmer",
         "repo": "zsh-aws-vault",
-        "rev": "5f2f1a67e34661b7c9604d574ac0b3d554c124fe",
-        "sha256": "1if81f6xl1h5hsqp68zl95lkk1gdypipck1pxz5v9fi5m6q7q8ng",
+        "rev": "3d5ad1ebfc12f91b157f7bf2a38027fc4f48bb76",
+        "sha256": "031iwg81g4d018g9pvf8mf4qkqcwknv42wgb99bg2z35m03zn1ic",
         "type": "tarball",
-        "url": "https://github.com/blimmer/zsh-aws-vault/archive/5f2f1a67e34661b7c9604d574ac0b3d554c124fe.tar.gz",
+        "url": "https://github.com/blimmer/zsh-aws-vault/archive/3d5ad1ebfc12f91b157f7bf2a38027fc4f48bb76.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "zsh-nix-shell": {
@@ -41,10 +41,10 @@
         "homepage": "",
         "owner": "chisui",
         "repo": "zsh-nix-shell",
-        "rev": "v0.1.0",
-        "sha256": "0snhch9hfy83d4amkyxx33izvkhbwmindy0zjjk28hih1a9l2jmx",
+        "rev": "f8574f27e1d7772629c9509b2116d504798fe30a",
+        "sha256": "0svskd09vvbzqk2ziw6iaz1md25xrva6s6dhjfb471nqb13brmjq",
         "type": "tarball",
-        "url": "https://github.com/chisui/zsh-nix-shell/archive/v0.1.0.tar.gz",
+        "url": "https://github.com/chisui/zsh-nix-shell/archive/f8574f27e1d7772629c9509b2116d504798fe30a.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "zsh-syntax-highlighting": {
@@ -53,10 +53,10 @@
         "homepage": "github.com/zsh-users/zsh-syntax-highlighting",
         "owner": "zsh-users",
         "repo": "zsh-syntax-highlighting",
-        "rev": "ebef4e55691f62e630318d56468e5798367aa81c",
-        "sha256": "0qimb90655hkm64mjqcn48kqq38cbfxlfhs324cbdi9gqpdi6q4b",
+        "rev": "1a9264bc661b3d52756916bf9ec3f41687d64db2",
+        "sha256": "119srhx1cy4bgj3v8lh5ydcgx70xvhc9kmj6mmgmdrrcc4an02xz",
         "type": "tarball",
-        "url": "https://github.com/zsh-users/zsh-syntax-highlighting/archive/ebef4e55691f62e630318d56468e5798367aa81c.tar.gz",
+        "url": "https://github.com/zsh-users/zsh-syntax-highlighting/archive/1a9264bc661b3d52756916bf9ec3f41687d64db2.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }

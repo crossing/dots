@@ -23,6 +23,7 @@ in
     envExtra = ''
       . "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
       export NIX_PATH=$HOME/.nix-defexpr/channels
+      export EDITOR=emacs
     '';
 
     shellAliases = {
@@ -48,6 +49,7 @@ in
         "pip"
         "terraform"
         "vagrant"
+        "emacs"
       ];
     };
 
