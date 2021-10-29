@@ -23,6 +23,18 @@
         "url": "https://github.com/crossing/oidc-cli/archive/e3bae61becbb62c764140570f38ee1b946743461.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
+    "sorri": {
+        "branch": "master",
+        "description": "Just Add Water direnv support for the nix-shell",
+        "homepage": null,
+        "owner": "nmattia",
+        "repo": "sorri",
+        "rev": "a13196b986cdcccd0adeb72c04f03c222116dd27",
+        "sha256": "1xw07ikaprcgz6dnlnf1jvc6paz2yj6f0m1nfdwnf0naziax9n3n",
+        "type": "tarball",
+        "url": "https://github.com/nmattia/sorri/archive/a13196b986cdcccd0adeb72c04f03c222116dd27.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "zsh-aws-vault": {
         "branch": "main",
         "description": "oh-my-zsh plugin for aws-vault",

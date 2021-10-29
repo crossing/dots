@@ -32,6 +32,7 @@
     pkgs.nixpkgs-fmt
     pkgs.tree
     pkgs.nix-tree
+    pkgs.sorri
 
     # dev
     pkgs.gh

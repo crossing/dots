@@ -13,5 +13,7 @@ in
         $out/bin/glab completion -s zsh > $out/share/zsh/site-functions/_glab
       '';
     });
+
+    sorri = (import sources.sorri { pkgs = self; });
   })
 ]
