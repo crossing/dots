@@ -38,7 +38,10 @@ This function should only modify configuration layer settings."
       ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
       ;; `M-m f e R' (Emacs style) to install them.
       ;; ----------------------------------------------------------------
-      auto-completion
+      (auto-completion :variables
+        auto-completion-return-key-behavior 'complete
+        auto-completion-tab-key-behavior 'cycle
+        auto-completion-minimum-prefix-length 0)
       better-defaults
       emacs-lisp
       themes-megapack
@@ -48,7 +51,8 @@ This function should only modify configuration layer settings."
       (lsp :variables
         lsp-rust-server 'rust-analyzer
         lsp-rust-analyzer-server-display-inlay-hints t
-        cargo-process-reload-on-modify t)
+        cargo-process-reload-on-modify t
+        lsp-terraform-server '("terraform-ls" "serve"))
       markdown
       multiple-cursors
       org
@@ -77,7 +81,8 @@ This function should only modify configuration layer settings."
       typescript
 
       (terraform :variables
-        terraform-auto-format-on-save t)
+        terraform-auto-format-on-save t
+        terraform-backend 'lsp)
     )
 
 

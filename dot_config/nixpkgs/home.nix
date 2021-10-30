@@ -24,6 +24,10 @@
     pkgs.zsh-completions
     pkgs.nerdfonts
 
+    # editors
+    pkgs.emacs
+    pkgs.vscode
+
     # utils
     pkgs.fasd
     pkgs.ripgrep
@@ -48,7 +52,7 @@
     pkgs.ansible
     pkgs.vagrant
     pkgs.terraform
-    pkgs.terraform-lsp
+    pkgs.terraform-ls
     pkgs.terragrunt
     pkgs.tflint
 

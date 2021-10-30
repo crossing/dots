@@ -1,36 +1,5 @@
 mkdir -p $HOME/.local/bin
 path+=($HOME/.local/bin)
-
-if [ ! -d "$HOME/.zgen" ]; then
-    git clone https://github.com/tarjoilija/zgen.git "${HOME}/.zgen"
-fi
-export ZGEN_RESET_ON_CHANGE=($HOME/.zshrc $HOME/.zshrc.d/**/*)
-source "${HOME}/.zgen/zgen.zsh"
-
-_zgen_omz() {
-    local plugin=$1
-    local plugin_or_theme=${2:-plugins}
-    if ! zgen saved; then
-        zgen oh-my-zsh $plugin_or_theme/$plugin
-    fi
-}
-
-_zgen_load() {
-    local plugin=$1
-    if ! zgen saved; then
-        zgen load $plugin
-    fi
-}
-
-if ! zgen saved; then
-    zgen oh-my-zsh
-fi
-_zgen_load unixorn/autoupdate-zgen
-
 for d in $HOME/.zshrc.d/*; do
     source $d
 done
-
-if ! zgen saved; then
-    zgen save
-fi
