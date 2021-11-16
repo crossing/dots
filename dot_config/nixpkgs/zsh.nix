@@ -6,6 +6,8 @@ in
     enable = true;
     enableCompletion = true;
     enableAutosuggestions = true;
+    enableSyntaxHighlighting = true;
+    autocd = true;
 
     initExtra = ''
       autoload -Uz bashcompinit && bashcompinit
@@ -14,6 +16,9 @@ in
       eval "$(starship init zsh)"
       eval "$(register-python-argcomplete az)"
       eval "$(register-python-argcomplete gcloud)"
+
+      bindkey "$terminfo[kcuu1]" history-substring-search-up
+      bindkey "$terminfo[kcud1]" history-substring-search-down
     '';
 
     initExtraBeforeCompInit = ''
@@ -64,8 +69,8 @@ in
         src = sources.zsh-nix-shell;
       }
       {
-        name = "zsh-syntax-highlighting";
-        src = sources.zsh-syntax-highlighting;
+        name = "zsh-history-substring-search";
+        src = sources.zsh-history-substring-search;
       }
     ];
   };

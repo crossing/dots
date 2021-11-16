@@ -47,6 +47,18 @@
         "url": "https://github.com/blimmer/zsh-aws-vault/archive/3d5ad1ebfc12f91b157f7bf2a38027fc4f48bb76.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
+    "zsh-history-substring-search": {
+        "branch": "master",
+        "description": "🐠 ZSH port of Fish history search (up arrow)",
+        "homepage": "",
+        "owner": "zsh-users",
+        "repo": "zsh-history-substring-search",
+        "rev": "4abed97b6e67eb5590b39bcd59080aa23192f25d",
+        "sha256": "0s8xdddb6zppc5lj28w44nl4n45wg9ic8x3b5pm1139cv038yj7j",
+        "type": "tarball",
+        "url": "https://github.com/zsh-users/zsh-history-substring-search/archive/4abed97b6e67eb5590b39bcd59080aa23192f25d.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "zsh-nix-shell": {
         "branch": "master",
         "description": "zsh plugin that lets you use zsh in nix-shell shells.",
@@ -57,18 +69,6 @@
         "sha256": "0svskd09vvbzqk2ziw6iaz1md25xrva6s6dhjfb471nqb13brmjq",
         "type": "tarball",
         "url": "https://github.com/chisui/zsh-nix-shell/archive/f8574f27e1d7772629c9509b2116d504798fe30a.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
-    },
-    "zsh-syntax-highlighting": {
-        "branch": "master",
-        "description": "Fish shell like syntax highlighting for Zsh.",
-        "homepage": "github.com/zsh-users/zsh-syntax-highlighting",
-        "owner": "zsh-users",
-        "repo": "zsh-syntax-highlighting",
-        "rev": "1a9264bc661b3d52756916bf9ec3f41687d64db2",
-        "sha256": "119srhx1cy4bgj3v8lh5ydcgx70xvhc9kmj6mmgmdrrcc4an02xz",
-        "type": "tarball",
-        "url": "https://github.com/zsh-users/zsh-syntax-highlighting/archive/1a9264bc661b3d52756916bf9ec3f41687d64db2.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }
