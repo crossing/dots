@@ -10,15 +10,8 @@ in
     autocd = true;
 
     initExtra = ''
-      autoload -Uz bashcompinit && bashcompinit
-      complete -C aws_completer aws
-
-      eval "$(starship init zsh)"
       eval "$(register-python-argcomplete az)"
       eval "$(register-python-argcomplete gcloud)"
-
-      bindkey "$terminfo[kcuu1]" history-substring-search-up
-      bindkey "$terminfo[kcud1]" history-substring-search-down
     '';
 
     initExtraBeforeCompInit = ''
@@ -36,15 +29,11 @@ in
       jj = "zz";
     };
 
-    zplug = {
+    oh-my-zsh = {
       enable = true;
-      plugins = map
-        (p: {
-          name = "plugins/${p}";
-          tags = [ "from:oh-my-zsh" ];
-        }) [
+      plugins = [
         "git"
-        "git-extra"
+        "git-extras"
         "docker"
         "ansible"
         "kubectl"
@@ -55,6 +44,7 @@ in
         "terraform"
         "vagrant"
         "emacs"
+        "aws"
       ];
     };
 
@@ -67,10 +57,6 @@ in
         name = "zsh-nix-shell";
         file = "nix-shell.plugin.zsh";
         src = sources.zsh-nix-shell;
-      }
-      {
-        name = "zsh-history-substring-search";
-        src = sources.zsh-history-substring-search;
       }
     ];
   };

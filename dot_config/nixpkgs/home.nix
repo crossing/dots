@@ -16,7 +16,7 @@
   nixpkgs.overlays = (import ./overlays.nix);
 
   home.packages = [
-    pkgs.nix
+    pkgs.nix_2_3
     pkgs.niv
 
     # essential
@@ -100,6 +100,8 @@
 
   programs.starship = {
     enable = true;
+    enableZshIntegration = true;
+    enableBashIntegration = true;
     settings = lib.importTOML ./files/starship.toml;
   };
 
