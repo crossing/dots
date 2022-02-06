@@ -5,10 +5,22 @@
         "homepage": "https://github.com/nmattia/niv",
         "owner": "nmattia",
         "repo": "niv",
-        "rev": "65a61b147f307d24bfd0a5cd56ce7d7b7cc61d2e",
-        "sha256": "17mirpsx5wyw262fpsd6n6m47jcgw8k2bwcp1iwdnrlzy4dhcgqh",
+        "rev": "5830a4dd348d77e39a0f3c4c762ff2663b602d4c",
+        "sha256": "1d3lsrqvci4qz2hwjrcnd8h5vfkg8aypq3sjd4g3izbc8frwz5sm",
         "type": "tarball",
-        "url": "https://github.com/nmattia/niv/archive/65a61b147f307d24bfd0a5cd56ce7d7b7cc61d2e.tar.gz",
+        "url": "https://github.com/nmattia/niv/archive/5830a4dd348d77e39a0f3c4c762ff2663b602d4c.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "nixos-generators": {
+        "branch": "master",
+        "description": "Collection of image builders [maintainer=@Lassulus]",
+        "homepage": "",
+        "owner": "nix-community",
+        "repo": "nixos-generators",
+        "rev": "531a109910d0095d7033492df6e1ffaa851e4e97",
+        "sha256": "0bh94krj4km8ibn3l83x0h0xbk480lhdcm5bkl4ywy3pk7cgzk11",
+        "type": "tarball",
+        "url": "https://github.com/nix-community/nixos-generators/archive/531a109910d0095d7033492df6e1ffaa851e4e97.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "oidc-cli": {
@@ -41,22 +53,10 @@
         "homepage": null,
         "owner": "blimmer",
         "repo": "zsh-aws-vault",
-        "rev": "3d5ad1ebfc12f91b157f7bf2a38027fc4f48bb76",
-        "sha256": "031iwg81g4d018g9pvf8mf4qkqcwknv42wgb99bg2z35m03zn1ic",
+        "rev": "0240d7cd13362353a8c1de0230934c59df81a842",
+        "sha256": "0mjk9vkk1h1rfaiwz8ikklqbszcsdccdnihw9341jjl72j31fsnj",
         "type": "tarball",
-        "url": "https://github.com/blimmer/zsh-aws-vault/archive/3d5ad1ebfc12f91b157f7bf2a38027fc4f48bb76.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
-    },
-    "zsh-history-substring-search": {
-        "branch": "master",
-        "description": "🐠 ZSH port of Fish history search (up arrow)",
-        "homepage": "",
-        "owner": "zsh-users",
-        "repo": "zsh-history-substring-search",
-        "rev": "4abed97b6e67eb5590b39bcd59080aa23192f25d",
-        "sha256": "0s8xdddb6zppc5lj28w44nl4n45wg9ic8x3b5pm1139cv038yj7j",
-        "type": "tarball",
-        "url": "https://github.com/zsh-users/zsh-history-substring-search/archive/4abed97b6e67eb5590b39bcd59080aa23192f25d.tar.gz",
+        "url": "https://github.com/blimmer/zsh-aws-vault/archive/0240d7cd13362353a8c1de0230934c59df81a842.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "zsh-nix-shell": {

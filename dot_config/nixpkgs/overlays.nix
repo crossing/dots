@@ -4,6 +4,7 @@ in
 [
   (self: super: {
     oidc-cli = (import sources.oidc-cli { });
+    nixos-generators = import sources.nixos-generators;
 
     glab = super.glab.overrideAttrs (old: {
       postInstall = ''

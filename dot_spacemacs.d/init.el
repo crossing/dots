@@ -77,7 +77,13 @@ This function should only modify configuration layer settings."
       (rust :variables
         rust-format-on-save t)
       python
-      javascript
+
+      html
+      (javascript :variables
+        javascript-backend 'lsp
+        javascript-fmt-tool 'web-beautify
+        javascript-fmt-on-save t
+        node-add-modules-path t)
       typescript
 
       (terraform :variables

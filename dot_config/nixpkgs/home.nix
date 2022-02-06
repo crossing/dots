@@ -81,6 +81,7 @@
     pkgs.nodePackages.vscode-json-languageserver
 
     pkgs.oidc-cli
+    pkgs.nixos-generators
   ];
 
   home.file = {
