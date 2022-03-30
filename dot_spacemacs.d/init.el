@@ -74,6 +74,8 @@ This function should only modify configuration layer settings."
         json-fmt-tool 'prettier
         json-backend 'lsp)
 
+      dap
+
       (rust :variables
         rust-format-on-save t)
       python

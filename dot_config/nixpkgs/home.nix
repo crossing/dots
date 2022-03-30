@@ -40,7 +40,6 @@
 
     # dev
     pkgs.gh
-    pkgs.glab
 
     # cloud
     pkgs.aws-vault
@@ -76,11 +75,9 @@
     pkgs.jdk11
 
     # misc
-    pkgs.consul
     pkgs.nodePackages.prettier
     pkgs.nodePackages.vscode-json-languageserver
 
-    pkgs.oidc-cli
     pkgs.nixos-generators
   ];
 
