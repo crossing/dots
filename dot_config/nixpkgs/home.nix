@@ -16,7 +16,7 @@
   nixpkgs.overlays = (import ./overlays.nix);
 
   home.packages = [
-    pkgs.nix_2_3
+    pkgs.nix
     pkgs.niv
 
     # essential
@@ -36,7 +36,6 @@
     pkgs.nixpkgs-fmt
     pkgs.tree
     pkgs.nix-tree
-    pkgs.sorri
 
     # dev
     pkgs.gh
@@ -51,8 +50,6 @@
     pkgs.ansible
     pkgs.vagrant
     pkgs.terraform
-    pkgs.terraform-ls
-    pkgs.terragrunt
     pkgs.tflint
 
     # k8s
@@ -60,7 +57,6 @@
     pkgs.kubernetes-helm
     pkgs.kustomize
     pkgs.k9s
-    pkgs.eksctl
     pkgs.skaffold
     pkgs.minikube
 
@@ -70,9 +66,6 @@
 
     # rust
     pkgs.rustup
-
-    # java
-    pkgs.jdk11
 
     # misc
     pkgs.nodePackages.prettier

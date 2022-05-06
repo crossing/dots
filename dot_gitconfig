@@ -1,7 +1,5 @@
 [include]
-    path = .gitconfig-{{ .gitconfig.default }}
-[includeIf "gitdir:~/works/qit/"]
-    path = .gitconfig-qit
+    path = .gitconfig-home
 [credential]
     helper = libsecret
 [pull]
