@@ -4,4 +4,4 @@ set -euo pipefail
 
 chezmoi apply -v
 nix-channel --update
-home-manager switch
+nix run nixpkgs#home-manager -- switch

@@ -9,13 +9,10 @@ fi
 
 source /etc/profile.d/nix.sh
 if ! (nix-channel --list | grep home-manager > /dev/null); then
-  nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
   nix-channel --add https://nixos.org/channels/nixpkgs-unstable nixpkgs
   nix-channel --update
 fi
 
 export NIX_PATH=$HOME/.nix-defexpr/channels${NIX_PATH:+:}$NIX_PATH
-nix-shell '<home-manager>' -A install
-
-nix run nixpkgs.chezmoi -c chezmoi init https://github.com/crossing/dots.git --apply
-home-manager switch
+nix run nixpkgs#chezmoi -- init https://github.com/crossing/dots.git --apply
+nix run nixpkgs#home-manager -- switch
