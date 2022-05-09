@@ -16,8 +16,12 @@
   nixpkgs.overlays = (import ./overlays.nix);
 
   home.packages = [
+    # nix goodies
     pkgs.nix
     pkgs.niv
+    pkgs.nix-tree
+    pkgs.nixpkgs-fmt
+    pkgs.nixos-generators
 
     # essential
     pkgs.chezmoi
@@ -33,9 +37,8 @@
     pkgs.ripgrep
     pkgs.ranger
     pkgs._1password
-    pkgs.nixpkgs-fmt
+    pkgs._1password-gui
     pkgs.tree
-    pkgs.nix-tree
 
     # dev
     pkgs.gh
@@ -70,8 +73,6 @@
     # misc
     pkgs.nodePackages.prettier
     pkgs.nodePackages.vscode-json-languageserver
-
-    pkgs.nixos-generators
   ];
 
   home.file = {
