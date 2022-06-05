@@ -11,6 +11,8 @@
   home.language.base = "en_GB.UTF-8";
   home.sessionVariables = {
     LOCALE_ARCHIVE_2_27 = "${pkgs.glibcLocales}/lib/locale/locale-archive";
+    NIX_PATH = "$HOME/.nix-defexpr/channels";
+    EDITOR = "emacs";
   };
 
   nixpkgs.overlays = (import ./overlays.nix);
