@@ -1,8 +1,11 @@
 { config, pkgs, lib, ... }:
 {
-  imports = [ ./zsh.nix ];
+  imports = [ 
+    ./zsh.nix 
+    ./git.nix
+    ./desktop.nix
+  ];
 
-  targets.genericLinux.enable = true;
   fonts.fontconfig.enable = true;
   news.display = "silent";
 
@@ -19,7 +22,6 @@
 
   home.packages = [
     # nix goodies
-    pkgs.nix
     pkgs.niv
     pkgs.nix-tree
     pkgs.nixpkgs-fmt
@@ -28,7 +30,6 @@
     # essential
     pkgs.chezmoi
     pkgs.zsh-completions
-    pkgs.nerdfonts
 
     # editors
     pkgs.emacs
@@ -39,11 +40,7 @@
     pkgs.ripgrep
     pkgs.ranger
     pkgs._1password
-    pkgs._1password-gui
     pkgs.tree
-
-    # dev
-    pkgs.gh
 
     # cloud
     pkgs.aws-vault
@@ -66,8 +63,8 @@
     pkgs.minikube
 
     # python
-    pkgs.python39
-    pkgs.python39Packages.argcomplete
+    pkgs.python3
+    pkgs.python3Packages.argcomplete
 
     # rust
     pkgs.rustup
