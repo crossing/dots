@@ -41,7 +41,7 @@ This function should only modify configuration layer settings."
       (auto-completion :variables
         auto-completion-return-key-behavior 'complete
         auto-completion-tab-key-behavior 'cycle
-        auto-completion-minimum-prefix-length 0)
+        auto-completion-minimum-prefix-length 1)
       better-defaults
       emacs-lisp
       themes-megapack
