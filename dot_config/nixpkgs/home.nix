@@ -19,8 +19,6 @@
     EDITOR = "emacs";
   };
 
-  nixpkgs.overlays = (import ./overlays.nix);
-
   home.packages = [
     # nix goodies
     pkgs.niv
