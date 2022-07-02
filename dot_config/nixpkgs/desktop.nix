@@ -16,5 +16,7 @@
     (nerdfonts.override { fonts = [ "FiraCode" "SourceCodePro" ]; })
     noto-fonts-cjk-sans
     noto-fonts-cjk-serif
+
+    libreoffice
   ];
 }
