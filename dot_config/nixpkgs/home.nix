@@ -62,8 +62,11 @@
     pkgs.minikube
 
     # python
-    pkgs.python3
-    pkgs.python3Packages.argcomplete
+    (pkgs.python3.withPackages (ps: with ps; [
+      importmagic
+      epc
+      argcomplete
+    ]))
 
     # rust
     pkgs.rustup
@@ -71,6 +74,7 @@
     # misc
     pkgs.nodePackages.prettier
     pkgs.nodePackages.vscode-json-languageserver
+    pkgs.nodePackages.pyright
   ];
 
   home.file = {

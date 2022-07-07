@@ -78,7 +78,8 @@ This function should only modify configuration layer settings."
 
       (rust :variables
         rust-format-on-save t)
-      python
+      (python :variables
+        python-lsp-server 'pyright)
 
       html
       (javascript :variables
