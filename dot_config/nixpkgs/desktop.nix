@@ -2,9 +2,9 @@
 {
   programs.firefox = {
     enable = true;
+    enableGnomeExtensions = true;
     package = pkgs.firefox.override {
       cfg = {
-        enableGnomeExtensions = true;
         enableTridactylNative = true;
       };
     };
