@@ -5,6 +5,7 @@
     ./git.nix
     ./ssh.nix
     ./desktop.nix
+    ./aws.nix
   ];
 
   fonts.fontconfig.enable = true;
@@ -43,8 +44,6 @@
     pkgs.tree
 
     # cloud
-    pkgs.aws-vault
-    pkgs.awscli2
     pkgs.azure-cli
     pkgs.google-cloud-sdk
 

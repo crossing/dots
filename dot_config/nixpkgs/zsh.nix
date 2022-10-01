@@ -38,15 +38,11 @@ in
         "terraform"
         "vagrant"
         "emacs"
-        "aws"
       ];
     };
 
     plugins = [
-      {
-        name = "zsh-aws-vault";
-        src = sources.zsh-aws-vault;
-      }
+
       {
         name = "zsh-nix-shell";
         file = "nix-shell.plugin.zsh";
