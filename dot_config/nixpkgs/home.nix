@@ -76,6 +76,10 @@
     pkgs.nodePackages.prettier
     pkgs.nodePackages.vscode-json-languageserver
     pkgs.nodePackages.pyright
+
+    # rclone
+    pkgs.rclone
+    pkgs.rclone-browser
   ];
 
   home.file = {
