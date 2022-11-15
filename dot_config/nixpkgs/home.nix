@@ -71,6 +71,11 @@
     # rust
     pkgs.rustup
 
+    # clojure
+    pkgs.clojure
+    pkgs.leiningen
+    pkgs.clojure-lsp
+
     # misc
     pkgs.nodePackages.prettier
     pkgs.nodePackages.vscode-json-languageserver

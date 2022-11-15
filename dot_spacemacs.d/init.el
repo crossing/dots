@@ -80,6 +80,16 @@ This function should only modify configuration layer settings."
         rust-format-on-save t)
       (python :variables
         python-lsp-server 'pyright)
+      (clojure :variables
+        clojure-enable-kaocha-runner t          ;; enable Kaocha test runner
+        cider-repl-display-help-banner nil      ;; disable help banner
+        cider-print-fn 'puget                   ;; pretty printing with sorted keys / set values
+        clojure-indent-style 'align-arguments
+        clojure-align-forms-automatically t
+        clojure-toplevel-inside-comment-form t  ;; evaluate expressions in comment as top level
+        cider-result-overlay-position 'at-point ;; results shown right after expression
+        cider-overlays-use-font-lock t
+        cider-repl-buffer-size-limit 100)        ;; limit lines shown in REPL buffer)
       haskell
 
       html
@@ -92,8 +102,7 @@ This function should only modify configuration layer settings."
 
       (terraform :variables
         terraform-auto-format-on-save t
-        terraform-backend 'lsp)
-    )
+        terraform-backend 'lsp))
 
 
    ;; List of additional packages that will be installed without being wrapped
