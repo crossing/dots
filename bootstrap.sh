@@ -8,11 +8,10 @@ if [ ! -f /etc/profile.d/nix.sh ]; then
 fi
 
 source /etc/profile.d/nix.sh
-if ! (nix-channel --list | grep home-manager > /dev/null); then
+if ! (nix-channel --list | grep nixpkgs > /dev/null); then
   nix-channel --add https://nixos.org/channels/nixpkgs-unstable nixpkgs
   nix-channel --update
 fi
 
 export NIX_PATH=$HOME/.nix-defexpr/channels${NIX_PATH:+:}$NIX_PATH
 nix run nixpkgs#chezmoi -- init https://github.com/crossing/dots.git --apply
-nix run nixpkgs#home-manager -- switch
